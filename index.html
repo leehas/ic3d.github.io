@@ -1,1 +1,1069 @@
-Hi
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="utf-8">
+  <!-- Title -->
+  <title>iC3D Health</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="author" content="">
+
+  <!-- Stylesheets -->
+  <link href="style/bootstrap.min.css" rel="stylesheet">
+  <link href="style/flexslider.css" rel="stylesheet">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <link href="style/style.css" rel="stylesheet">
+  
+  
+		<!-- Respond JS for IE8 -->
+		<script src="js/respond.min.js"></script>
+		<!-- HTML5 Support for IE -->
+		<script src="js/html5shiv.js"></script>
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="img/favicon/favicon.png">
+
+    <link href="style/cms-style.css" rel="stylesheet" />
+
+</head>
+
+<body>
+
+    <div class="preLoad-wrap" style="display: none;">
+        <i class="fa fa-spinner fa-spin"></i> <br> Please wait...
+    </div>
+    <div id="cmsBuilder" class="container">
+
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <img src="img/logo_iC3Dhealth.png" width="20" /> iC3D Health - CMS
+            </div>
+        </div>
+
+        <!-- Menu Items -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h4>Update Menu Titles</h4>
+            </div>
+
+            <div class="col-lg-3">
+                <div class="form-group">
+                    <input class="form-control" type="text" id="menu1" name="menu1" placeholder="Menu 1" value="Tour" />
+                </div>
+            </div>
+
+            <div class="col-lg-3">
+                <div class="form-group">
+                    <input class="form-control" type="text" id="menu2" name="menu2" placeholder="Menu 2" value="Consultation" />
+                </div>
+            </div>
+
+            <div class="col-lg-3">
+                <div class="form-group">
+                    <input class="form-control" type="text" id="menu3" name="menu3" placeholder="Menu 3" value="Doctor" />
+                </div>
+            </div>
+
+            <div class="col-lg-3">
+                <div class="form-group">
+                    <input class="form-control" type="text" id="menu4" name="menu4" placeholder="Menu 4" value="Optometrists" />
+                </div>
+            </div>
+
+            <div class="col-lg-3">
+                <div class="form-group">
+                    <input class="form-control" type="text" id="menu5" name="menu5" placeholder="Menu 5" value="Testimonials" />
+                </div>
+            </div>
+
+            <div class="col-lg-3">
+                <div class="form-group">
+                    <input class="form-control" type="text" id="menu6" name="menu6" placeholder="Menu 6" value="Financing" />
+                </div>
+            </div>
+
+            <div class="col-lg-3">
+                <div class="form-group">
+                    <input class="form-control" type="text" id="menu7" name="menu7" placeholder="Menu 7" value="Technology" />
+                </div>
+            </div>
+
+            <div class="col-lg-3">
+                <div class="form-group">
+                    <input class="form-control" type="text" id="menu8" name="menu8" placeholder="Menu 8" value="FAQs" />
+                </div>
+            </div>
+
+        </div>
+
+        <hr />    
+        
+        <!-- Consultation Overview -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <h4>Consultation Overview</h4>
+                </div>
+                <div class="col-lg-9">
+
+                    <div class="form-group">
+                        <input class="form-control" type="text" id="firstname" name="firstname" placeholder="Firstname" />
+                    </div>
+
+                    <div class="form-group">
+                        <input class="form-control" type="text" id="lastname" name="lastname" placeholder="Lastname" />
+                    </div>
+
+                    <div class="form-group">
+                        <input class="form-control" type="date" id="optindate" name="optindate" placeholder="Lastname" />
+                    </div>
+
+                    <div class="form-group">
+                        <textarea class="form-control" id="shortConsultOverview" name="shortConsultOverview" placeholder="Short Consultation Overview"></textarea>
+                        <small>Note: <input type="text" readonly class="token" value="&lt;br /&gt;" />, <input type="text" readonly class="token" value="&lt;p&gt;&lt;/p&gt;" />, <input type="text" readonly class="token" value="&lt;b&gt;&lt;/b&gt;" />, <input type="text" readonly class="token" value="&lt;a href='#'&gt;text&lt;/a&gt;" />, <input type="text" readonly class="token" value="&lt;ul&gt;&lt;li&gt;&lt;/li&gt;&lt;/ul&gt;" />, <input type="text" readonly class="token" value="&lt;ol&gt;&lt;li&gt;&lt;/li&gt;&lt;/ol&gt;" /></small>
+                    </div>
+
+                </div>
+
+                <div class="col-lg-3">
+                    <div class="form-group">
+                        <img src="http://placehold.it/180x220&amp;text=Background" class="img-thumbnail img-responsive header-img change-img" title="Click on picture to change">
+                        <input type="file" class="hide">
+                        <div class="clearfix"></div>
+                        <small>Best Resolution, w:2910px h:1689px</small>
+                    </div>
+
+                </div>
+            </div>
+
+            <hr />
+
+            <!-- Tour of Our Surgery Center -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <h4><i class="fa fa-edit"></i> <span class="head1" contenteditable>Tour of Our Surgery Center</span></h4>
+                </div>
+                <div class="col-lg-12">
+
+                    <ul class="nav nav-tabs" role="tablist" id="surgeryTabs">
+                        <li role="presentation" class="active"><a href="#textSurgery" aria-controls="home" role="tab" data-toggle="tab">Text</a></li>
+                        <li role="presentation"><a href="#videoSurgery" aria-controls="profile" role="tab" data-toggle="tab">Video</a></li>
+                        <li role="presentation"><a href="#imageSurgery" aria-controls="messages" role="tab" data-toggle="tab">Image</a></li>
+                    </ul>
+
+                    <div class="tab-content">
+                        <div role="tabpanel" class="tab-pane active" id="textSurgery">
+                            <div class="form-group">
+                                <textarea class="form-control" placeholder="Content" style="min-height:60px;"></textarea>
+                            </div>
+                        </div>
+                        <div role="tabpanel" class="tab-pane" id="videoSurgery">
+                            <div class="form-group">
+                                <textarea class="form-control" placeholder="&lt;iframe width='640' height='390' src='https://www.youtube.com/embed/TCkFD_kM0D0' frameborder='0' allowfullscreen&gt;&lt;/iframe&gt;" style="min-height:60px;"></textarea>
+                            </div>
+                        </div>
+                        <div role="tabpanel" class="tab-pane" id="imageSurgery">
+                            <div class="form-group">
+                                <img src="http://placehold.it/180x220&amp;text=image" class="img-thumbnail img-responsive surgery-img change-img" title="Click on picture to change">
+                                <input type="file" class="hide">
+                            </div>
+                        </div>
+                    </div>
+
+                    
+                </div>
+            </div>
+
+            <hr />
+
+            <!-- Your Consultation Overview -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <h4><i class="fa fa-edit"></i> <span class="head2" contenteditable>Your Consultation Overview</span></h4>
+                </div>
+
+                <div class="consultation-menu">
+
+                    <div>
+                        <div class="col-lg-11">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title"><a name="bmcollapse2020Vision" href=".collapse2020Vision" xt="SPBOOKMARK" data-parent="#accordion" data-toggle="collapse">20/20 Vision</a></h4>
+                                </div>
+                                <div class="panel-collapse collapse collapse2020Vision">
+                                    <div class="panel-body">
+                                        <p>20/20 vision is a term used to express normal visual acuity (the clarity or sharpness of vision) measured at a distance of 20 feet. If you have 20/20 vision, you can see clearly at 20 feet what should normally be seen at that distance. If you have 20/100 vision, it means that you must be as close as 20 feet to see what a person with normal vision can see at 100 feet.</p>
+                                        <iframe class="video_wrapper" height="480" frameborder="0" width="640" allowfullscreen="" src="https://www.youtube.com/embed/T3VD4o9sBSw?rel=0"></iframe>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-1"><input type="checkbox" /></div>
+                    </div>
+
+                    <div>
+                        <div class="col-lg-11">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title"><a name="bmcollapseMyopia" href=".collapseMyopia" xt="SPBOOKMARK" data-parent="#accordion" data-toggle="collapse">Myopia (Nearsightedness)</a></h4>
+                                </div>
+                                <div class="panel-collapse collapse collapseMyopia">
+                                    <div class="panel-body">
+                                        <p>Nearsightedness or myopia is a condition in which close objects are seen clearly, but objects farther away appear blurred. This is because the eyeball is too long relative to the focusing power of the cornea and the lens of the eye, and the image falls in front of the retina. Myopia is a fairly common condition and one that can be corrected through the refractive surgery options available.</p>
+                                        <iframe class="video_wrapper" height="480" frameborder="0" width="640" allowfullscreen="" src="https://www.youtube.com/embed/OujFzowzasA?rel=0"></iframe>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-1"><input type="checkbox" /></div>
+                    </div>
+
+                    <div>
+                        <div class="col-lg-11">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title"><a name="bmcollapseAstigmatism" href=".collapseAstigmatism" xt="SPBOOKMARK" data-parent="#accordion" data-toggle="collapse">Astigmatism</a></h4>
+                                </div>
+                                <div class="panel-collapse collapse collapseAstigmatism">
+                                    <div class="panel-body">
+                                        <p>Astigmatism occurs when the image of an object is not focused on the central part of the retina. This is a result of a cornea which is shaped like a cylinder rather than a sphere. This results in vision that is blurred at all distances but especially at far.</p>
+                                        <iframe class="video_wrapper" height="480" frameborder="0" width="640" allowfullscreen="" src="https://www.youtube.com/embed/AepsPWtLnLc?rel=0"></iframe>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-1"><input type="checkbox" /></div>
+                    </div>
+
+                    <div>
+                        <div class="col-lg-11">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title"><a name="bmcollapseHyperopia" href=".collapseHyperopia" xt="SPBOOKMARK" data-parent="#accordion" data-toggle="collapse">Hyperopia (Farsightedness)</a></h4>
+                                </div>
+                                <div class="panel-collapse collapse collapseHyperopia">
+                                    <div class="panel-body">
+                                        <p>Farsightedness is a condition in which distant objects may be seen relatively clearly, but close objects do not come into proper focus. This occurs when your eyeball is too short or the cornea is too flat. As a result, the light entering your eye is focused behind the retina. This condition can mimic or aggravate the need for reading glasses which is observed with the normal aging process.</p>
+                                        <iframe class="video_wrapper" height="480" frameborder="0" width="640" allowfullscreen="" src="https://www.youtube.com/embed/fXcUIhgA8Zc?rel=0"</iframe>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-1"><input type="checkbox" /></div>
+                    </div>
+
+                    <div>
+                        <div class="col-lg-11">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title"><a name="bmcollapsePresbyopia" href=".collapsePresbyopia" xt="SPBOOKMARK" data-parent="#accordion" data-toggle="collapse">Presbyopia</a></h4>
+                                </div>
+                                <div class="panel-collapse collapse collapsePresbyopia">
+                                    <div class="panel-body">
+                                        <p>Presbyopia is a condition in which the lens of your eye loses its flexibility making focusing on near objects difficult. Presbyopia is a natural occurring aging process which usually manifests itself in the early to mid-40s.</p>
+                                        <iframe class="video_wrapper" height="480" frameborder="0" width="640" allowfullscreen="" src="https://www.youtube.com/embed/71etxv9uqhI?rel=0"></iframe>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-1"><input type="checkbox" /></div>
+                    </div>
+
+                    <div>
+                        <div class="col-lg-11">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title"><a name="bmcollapseCataracts" href=".collapseCataracts" xt="SPBOOKMARK" data-parent="#accordion" data-toggle="collapse">Cataracts</a></h4>
+                                </div>
+                                <div class="panel-collapse collapse collapseCataracts">
+                                    <div class="panel-body">
+                                        <p>Cataract is a natural aging process of the eye where the crystalline lens becomes progressively cloudy. During the cataract surgery, this cloudy lens is replaced with a specialized intraocular artificial lens restoring clear vision.</p>
+                                        <iframe class="video_wrapper" height="480" frameborder="0" width="640" allowfullscreen="" src="https://www.youtube.com/embed/ZmnaYg9BWso?rel=0"></iframe>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-1"><input type="checkbox" /></div>
+                    </div>
+
+                    <div>
+                        <div class="col-lg-11">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title"><a name="bmcollapseKeratoconus" href=".collapseKeratoconus" xt="SPBOOKMARK" data-parent="#accordion" data-toggle="collapse">Keratoconus</a></h4>
+                                </div>
+                                <div class="panel-collapse collapse collapseKeratoconus">
+                                    <div class="panel-body">
+                                        <p>Keratoconus is a condition in which the cornea becomes progressively weak. This leads to irregular shape of the cornea causing blurred vision. In the early phase, the vision can be corrected with either glasses or specialized contact lenses. However, in its advanced stages, surgery is required to restore vision.</p>
+                                        <iframe class="video_wrapper" height="315" frameborder="0" width="420" allowfullscreen="" src="https://www.youtube.com/embed/ptO0mrfXy10?rel=0"></iframe>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-1"><input type="checkbox" /></div>
+                    </div>
+
+                    <div>
+                        <div class="col-lg-11">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title"><a name="bmcollapseBladed" href=".collapseBladed" xt="SPBOOKMARK" data-parent="#accordion" data-toggle="collapse">Bladed Lasik</a></h4>
+                                </div>
+                                <div class="panel-collapse collapse collapseBladed">
+                                    <div class="panel-body">
+                                        <p>In bladed LASIK surgery, the corneal flap is created by using a device called Microkeratome. Once the flap is created with a blade, an excimer laser is used to change the curvature of your cornea to correct your vision.</p>
+                                        <iframe class="video_wrapper" height="480" frameborder="0" width="640" allowfullscreen="" src="https://www.youtube.com/embed/jCrwmBrHKLg?rel=0"></iframe>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-1"><input type="checkbox" /></div>
+                    </div>
+
+                    <div>
+                        <div class="col-lg-11">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title"><a name="bmcollapseLasik" href=".collapseLasik" xt="SPBOOKMARK" data-parent="#accordion" data-toggle="collapse">Bladeless LASIK</a></h4>
+                                </div>
+                                <div class="panel-collapse collapse collapseLasik">
+                                    <div class="panel-body">
+                                        <p>In bladeless LASIK, the corneal flap is created using a high precision femtosecond laser.  Once the flap is created, an excimer laser is used to change the curvature of your cornea to correct your vision. Its advantage include higher precision, customizable flap, and greater comfort.</p>
+                                        <iframe class="video_wrapper" height="480" frameborder="0" width="640" allowfullscreen="" src="https://www.youtube.com/embed/OvEd4yryBGE?rel=0"></iframe>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+                        <div class="col-lg-1"><input type="checkbox" /></div>
+                    </div>
+
+                    <div>
+                        <div class="col-lg-11">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title"><a name="bmcollapsePRK" href=".collapsePRK" xt="SPBOOKMARK" data-parent="#accordion" data-toggle="collapse">PRK (Photorefractive keratectomy)</a></h4>
+                                </div>
+                                <div class="panel-collapse collapse collapsePRK">
+                                    <div class="panel-body">
+                                        <p>PRK (Photorefractive keratectomy) is a form of laser vision correction where reshaping of the cornea is achieved with an excimer laser without creating a flap. This procedure may be recommended for people with thin corneas.</p>
+                                        <iframe class="video_wrapper" height="480" frameborder="0" width="640" allowfullscreen="" src="https://www.youtube.com/embed/uAy2pCQgENg?rel=0"></iframe>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="col-lg-1"><input type="checkbox" /></div>
+                    </div>
+
+                    <div>
+                        <div class="col-lg-11">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title"><a name="bmcollapseICL" href=".collapseICL" xt="SPBOOKMARK" data-parent="#accordion" data-toggle="collapse">ICL</a></h4>
+                                </div>
+                                <div class="panel-collapse collapse collapseICL">
+                                    <div class="panel-body">
+                                        <p>Implantable Collamer Lens surgery is a procedure in which vision correction is accomplished by inserting a biocompatible and customized lens inside the eye. This reversible procedure is a great alternative to laser vision correction for patients with high correction or thin corneas.</p>
+                                        <iframe class="video_wrapper" height="480" frameborder="0" width="640" allowfullscreen="" src="https://www.youtube.com/embed/NmocfevXTAE?rel=0"></iframe>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-1"><input type="checkbox" /></div>
+                    </div>
+
+                </div>
+
+                </div>
+
+            <hr />
+
+            <!-- Our Doctor -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <h4><i class="fa fa-edit"></i> <span class="head3" contenteditable>Our Doctor</span></h4>
+                </div>
+                <table class="table table-striped table-hover sorted_table" id="tabDoctor">
+                    <tr>
+                        <td width="5%" class="sorter"><i class="fa fa-arrows"></i></td>
+                        <td width="70%">
+                            <textarea class="form-control" style="min-height: 128px;" placeholder="Content"></textarea>
+                            <small>Note: <input type="text" readonly class="token" value="&lt;br /&gt;" />, <input type="text" readonly class="token" value="&lt;p&gt;&lt;/p&gt;" />, <input type="text" readonly class="token" value="&lt;b&gt;&lt;/b&gt;" />, <input type="text" readonly class="token" value="&lt;a href='#'&gt;text&lt;/a&gt;" />, <input type="text" readonly class="token" value="&lt;ul&gt;&lt;li&gt;&lt;/li&gt;&lt;/ul&gt;" />, <input type="text" readonly class="token" value="&lt;ol&gt;&lt;li&gt;&lt;/li&gt;&lt;/ol&gt;" /></small>
+                        </td>
+                        <td width="20%">
+                            <img src="http://placehold.it/140x120&text=Picture" class="img-thumbnail doctor-img change-img" title="Click on picture to change">
+                            <input type="file" class="hide" />
+                        </td>
+                        <td width="5%">
+                            <button class="btn btn-info btn-xs docAdd"><i class="fa fa-plus"></i></button>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+            <hr />
+
+            <!-- Our Optometrists -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <h4><i class="fa fa-edit"></i> <span class="head4" contenteditable>Our Optometrists</span></h4>
+                </div>
+                <div class="col-lg-12">
+                    <div class="form-group">
+                        <textarea class="form-control" id="optometristsContent" name="optometristsContent" placeholder="Optometrists content"></textarea>
+                        <small>Note: <input type="text" readonly class="token" value="&lt;br /&gt;" />, <input type="text" readonly class="token" value="&lt;p&gt;&lt;/p&gt;" />, <input type="text" readonly class="token" value="&lt;b&gt;&lt;/b&gt;" />, <input type="text" readonly class="token" value="&lt;a href='#'&gt;text&lt;/a&gt;" />, <input type="text" readonly class="token" value="&lt;ul&gt;&lt;li&gt;&lt;/li&gt;&lt;/ul&gt;" />, <input type="text" readonly class="token" value="&lt;ol&gt;&lt;li&gt;&lt;/li&gt;&lt;/ol&gt;" /></small>
+                    </div>
+                </div>
+            </div>
+
+            <hr />
+
+            <!-- Testimonials -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <h4><i class="fa fa-edit"></i> <span class="head5" contenteditable>Testimonials</span></h4>
+                </div>
+                <div class="col-lg-12">
+                    <table id="testimonialsInfo" class="table table-striped table-hover sorted_table">
+                        <tr>
+                            <td class="sorter"><i class="fa fa-arrows"></i></td>
+                            <td width="60%">
+                                <textarea class="form-control" placeholder="Testimonial Description..."></textarea>
+                            </td>
+                            <td width="30%">
+                                <input type="text" class="form-control" placeholder="Client Name" />
+                            </td>
+                            <td width="30%">
+                                <input type="date" class="form-control" placeholder="Submited Date" />
+                            </td>
+                            <td width="10%">
+                                <button class="btn btn-info btn-xs tAdd"><i class="fa fa-plus"></i></button>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+            <hr />
+
+            <!-- Our Financing -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <h4><i class="fa fa-edit"></i> <span class="head6" contenteditable>Financing</span></h4>
+                </div>
+                <div class="col-lg-12">
+                    <div class="form-group">
+                        <textarea class="form-control" id="financingContent" name="financingContent" placeholder="Financing content"></textarea>
+                        <small>Note: <input type="text" readonly class="token" value="&lt;br /&gt;" />, <input type="text" readonly class="token" value="&lt;p&gt;&lt;/p&gt;" />, <input type="text" readonly class="token" value="&lt;b&gt;&lt;/b&gt;" />, <input type="text" readonly class="token" value="&lt;a href='#'&gt;text&lt;/a&gt;" />, <input type="text" readonly class="token" value="&lt;ul&gt;&lt;li&gt;&lt;/li&gt;&lt;/ul&gt;" />, <input type="text" readonly class="token" value="&lt;ol&gt;&lt;li&gt;&lt;/li&gt;&lt;/ol&gt;" /></small>
+                    </div>
+                </div>
+                <div class="col-lg-12">
+                    <input type="checkbox" name="calc" id="calc" /> Use calculator ? <img src="img/photos/care_credit_calculator.gif" width="80" />
+                </div>
+            </div>
+
+            <hr />
+
+            <!-- The Latest Technology -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <h4><i class="fa fa-edit"></i> <span class="head7" contenteditable>The Latest Technology</span></h4>
+                </div>
+                <div class="col-lg-12">
+                    <table id="latestTechnology" class="table table-striped table-hover sorted_table">
+                        <tr>
+                            <td class="sorter"><i class="fa fa-arrows"></i></td>
+                            <td width="60%">
+                                <input type="text" class="form-control" placeholder="Name" />
+                            </td>
+                            <td width="30%">
+                                <img src="http://placehold.it/80x80&amp;text=Picture" class="img-thumbnail change-img" title="Click on picture to change">
+                                <input type="file" class="hide">
+                            </td>
+                            <td width="10%">
+                                <button class="btn btn-info btn-xs techAdd"><i class="fa fa-plus"></i></button>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="col-lg-12">
+                    <div class="form-group">
+                        <textarea class="form-control" id="technologyContent" name="technologyContent" placeholder="Technology content"></textarea>
+                        <small>Note: <input type="text" readonly class="token" value="&lt;br /&gt;" />, <input type="text" readonly class="token" value="&lt;p&gt;&lt;/p&gt;" />, <input type="text" readonly class="token" value="&lt;b&gt;&lt;/b&gt;" />, <input type="text" readonly class="token" value="&lt;a href='#'&gt;text&lt;/a&gt;" />, <input type="text" readonly class="token" value="&lt;ul&gt;&lt;li&gt;&lt;/li&gt;&lt;/ul&gt;" />, <input type="text" readonly class="token" value="&lt;ol&gt;&lt;li&gt;&lt;/li&gt;&lt;/ol&gt;" /></small>
+                    </div>
+                </div>
+
+            </div>
+
+            <hr />
+
+            <!-- Frequently Asked Questions -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <h4><i class="fa fa-edit"></i> <span class="head8" contenteditable>Frequently Asked Questions</span></h4>
+                </div>
+                <div class="col-lg-12">
+                    <table id="faq" class="table table-striped table-hover sorted_table">
+                        <tr>
+                            <td class="sorter"><i class="fa fa-arrows"></i></td>
+                            <td width="90%">
+                                <input type="text" class="form-control" placeholder="Question" />
+                                <textarea class="form-control" placeholder="Answer"></textarea>
+                            </td>
+                            <td width="10%">
+                                <button class="btn btn-info btn-xs faqAdd"><i class="fa fa-plus"></i></button>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+            <hr />
+
+            <!-- Contact Us -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <h4><i class="fa fa-edit"></i> <span class="head9" contenteditable>Call Us</span></h4>
+                </div>
+                <div class="col-lg-12">
+                    <div class="form-group">
+                        <textarea class="form-control" id="callUsDesc" name="callUsDesc" placeholder="Call to us"></textarea>
+                    </div>
+                </div>
+
+                <table class="table table-striped table-hover sorted_table" id="tabLocation">
+                    <tr>
+                        <td width="5%" class="sorter"><i class="fa fa-arrows"></i></td>
+                        <td width="90%">
+                            <div class="form-group"><input class="form-control" type="text" placeholder="Office name" /></div>
+                            <div class="form-group"><input class="form-control" type="tel" placeholder="Contact Number" /></div>
+                            <div class="form-group"><input class="form-control" type="text" placeholder="Street" /></div>
+                            <div class="form-group"><input class="form-control" type="text" placeholder="City, State, Country and Zipcode" /></div>
+                            <div class="form-group">
+                                <textarea class="form-control" type="text" id="map" name="map" placeholder="Google map" style="min-height:60px;"></textarea>
+                                <small>Note: <input type="text" readonly class="token" value="&lt;a href='#'&gt;text&lt;/a&gt;" /></small>
+                            </div>
+                        </td>
+                        <td width="5%"><button class="btn btn-info btn-xs locAdd"><i class="fa fa-plus"></i></button></td>
+                    </tr>
+                </table>
+            </div>
+
+
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="well text-center">
+                        <button class="btn btn-info btn-lg submit-preview">Submit & Preview</button>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- End of Builder -->
+        </div>
+
+    
+    
+    <!-- Bootstrap navbar -->
+    <div class="navbar navbar-inverse navbar-fixed-top bs-docs-nav" role="banner">
+        <div class="container">
+         <div class="navbar-header">
+            <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon icon-bar"></span>
+              <span class="icon icon-bar"></span>
+              <span class="icon icon-bar"></span>
+            </button>
+      
+          </div>
+          <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation" id="top-menu">
+        <ul class="nav navbar-nav">
+         <!-- Navigation links. Note down the class name. It is important -->
+          <li><a href="#tour" class="anchorLink">Tour</a></li>
+          <li><a href="#consultation" class="anchorLink">Consultation</a></li>
+          <li><a href="#doctor" class="anchorLink">Doctor</a></li>
+          <li><a href="#optometrists" class="anchorLink">Optometrists</a></li>
+          <li><a href="#testimonials" class="anchorLink">Testimonials</a></li>
+          <li><a href="#financing" class="anchorLink">Financing</a></li>
+          <li><a href="#technology" class="anchorLink">Technology</a></li>
+          <li><a href="#faqs" class="anchorLink">FAQs</a></li>
+        </ul>
+      </nav>
+		</div>
+    </div>
+    <div id="page-wrapper">
+
+        <!-- Edit -->
+        <div id="editBack">
+            <a href="#edit" class="btn btn-info btn-xs" role="button" title="Edit">&nbsp; <i class="fa fa-edit"></i></a>
+        </div>
+
+        <!-- Header -->
+        <header>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="hero">
+                            <!-- Getting married -->
+                            <h2>
+                                <db class="ic_FirstName">%%First_Name%%</db> <db class="ic_LastName">%%Last_Name%%</db>'s
+                                <br />Consultation Overview
+                                <br /><db class="ic_OptInDate">%%Opt In Date%%</db>
+                            </h2>
+                            <div class="well">
+                                <!-- date -->
+                                <!-- Name -->
+                                <h2>Hi <db class="ic_FirstName">%%First_Name%%</db>,</h2>
+                                <!-- Small para -->
+                                <div class="ic_shortOverview">
+                                    <p>Thanks for coming in to visit us at Dishler Laser Institute. We covered quite a bit in your consultation so this personal website reviews the information we discussed. </p>
+                                    <p>We appreciate the consideration and opportunity to help you improve your lifestyle and vision.</p>
+                                    <p><br />We look forward to hearing from you,<br />The Dishler Laser Team<br />303.793.3000</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <a name="tour" id="tour"></a>
+        <div class="tour_section">
+            <div class="border"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <!-- Title -->
+                        <div class="head">
+                            <div class="bor-top"></div>
+                            <h2>Tour of Our Surgery Center</h2>
+                            <div class="bor"></div>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="tour">
+                            <iframe width="100%" height="380" src="https://www.youtube.com/embed/v4MFmB-67_4" frameborder="0" allowfullscreen></iframe>
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <a name="consultation" id="consultation"></a>
+        <div class="consultation_section">
+            <div class="border"></div>
+            <div class="itop"><a href="#tour" class="anchorLink"><i class="fa fa-chevron-up"></i></a></div>
+            <div class="border"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <!-- Title -->
+                        <div class="head">
+                            <div class="bor-top"></div>
+                            <h2>Your Consultation Overview</h2>
+                            <div class="bor"></div>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="consultation">
+                            <!-- begin myopia panel -->
+                            %%DC::MYOPIA_PANEL::MYOPIA_PANEL%%
+                            <!-- end myopia panel -->
+                            <!-- begin Astigmatism panel -->
+                            %%DC::ASTIGMATISM_PANEL::ASTIGMATISM_PANEL%%
+                            <!-- end Astigmatism panel -->
+                            <!-- begin Hyperopia panel -->
+                            %%DC::HYPEROPIA_PANEL::HYPEROPIA_PANEL%%
+                            <!-- end Hyperopia panel -->
+                            <!-- begin Presbyopia panel -->
+                            %%DC::PRESBYOPIA_PANEL::PRESBYOPIA_PANEL%%
+                            <!-- end Presbyopia panel -->
+                            <!-- begin Cataracts panel -->
+                            %%DC::CATARACTS_PANEL::CATARACTS_PANEL%%
+                            <!-- end Cataracts panel -->
+                            <!-- begin Keratoconus panel -->
+                            %%DC::KERATOCONUS_PANEL::KERATOCONUS_PANEL%%
+                            <!-- end Keratoconus panel -->
+                            <!-- begin panel -->
+                            %%DC::BLADELESS_LASIK_PANEL::BLADELESS_LASIK_PANEL%%
+                            <!-- end panel -->
+                            <!-- begin panel -->
+                            %%DC::BLADED_LASIK_PANEL::BLADED_LASIK_PANEL%%
+                            <!-- end panel -->
+                            <!-- begin panel -->
+                            %%DC::PRK_PANEL::PRK_PANEL%%
+                            <!-- end panel -->
+                            <!-- begin panel -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <a name="doctor" id="doctor"></a>
+        <div class="doctor_section">
+            <div class="border"></div>
+            <div class="itop"><a href="#tour" class="anchorLink"><i class="fa fa-chevron-up"></i></a></div>
+            <div class="border"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <!-- Title -->
+                        <div class="head">
+                            <div class="bor-top"></div>
+                            <h2>Our Doctor</h2>
+                            <div class="bor"></div>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="well ic_Doctors">
+                            <div class="head">
+                                <div id="ic_DoctorDesc" class="col-md-9">
+                                    <h2>Dr. Jon Dishler</h2>
+                                    <p>After starting his practice in 1982, Dr. Jon Dishler became the first eye surgeon to offer LASIK in the state of Colorado. Since that time, he has continued to be an innovator in the field.</p>
+                                    <p><strong>Experience - </strong>Dr. Dishler has more than 25 years of experience in performing refractive surgery, and 19 years in performing laser vision surgery. He's performed over 56,000+ LASIK procedures.</p>
+                                    <p><strong>Clinical Research - </strong>Dr. Dishler served as the principal investigator in ten Food and Drug Administration studies for laser manufacturers such as, IntraLase, Bausch & Lomb, ReVision Optics, and  Carl Zeiss Meditec, as well as in studies of the Dishler Excimer Laser. </p>
+                                    <p><strong>Innovation - </strong>Dr. Dishler was the first Colorado surgeon to introduce the Zeiss MEL 80 excimer laser to his practice, and the first surgeon in North America to use the Zeiss Visumax Femtosecond laser. He is also the first and only ophthalmologist in Colorado to develop an FDA-approved excimer laser. </p>
+                                    <p><strong>Honors & Awards</strong></p>
+                                    <div class="ul_wrapper">
+                                        <ul>
+                                            <li>Goldline Research-2010- As seen in Forbes selected as one of the Leading Laser Eye Surgeons of the United States </li>
+                                            <li>Scientific Board - 2008 - Carl Zeiss Meditec for clinical excellence, scientific expertise and innovative contributions</li>
+                                            <li>Luminaries Award -  2005 - presented by IntraLase Corporation, as a major contributor for guiding the future of IntraLase</li>
+                                            <li>Pioneer Award - 2003 - In recognition of bringing Femtosecond<br />“All Laser” technology to the field of refractive surgery</li>
+                                            <li>Clarity Award - 2002 - In appreciation of Leadership and Experience<br />Wavefront Symposium for leading refractive surgeons of the world by <br />Bausch & Lomb</li>
+                                        </ul>
+                                    </div>
+                                    <p>We encourage you to visit the <a href="http://www.trustedlasiksurgeons.com/why_use_a_trusted_lasik_surgeon.htm" target="_blank">Trusted LASIK Surgeons' website</a> to view comprehensive information about Dr. Dishler and our facility.</p>
+                                </div>
+                                <div class="col-md-3">
+                                    <img id="ic_DoctorImg" src="http://107.170.65.68/ic3d/dishler/img/photos/doctor_Dishler.jpg" alt="Doctor Dishler" class="img-responsive" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <a name="optometrists" id="optometrists"></a>
+        <div class="optometrists_section">
+            <div class="border"></div>
+            <div class="itop"><a href="#tour" class="anchorLink"><i class="fa fa-chevron-up"></i></a></div>
+            <div class="border"></div>
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="head">
+                            <div class="bor-top"></div>
+                            <h2>Our Optometrists</h2>
+                            <div class="bor"></div>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="optometrists">
+                            <h3>Kim Brownfield</h3>
+                            <p>Kim Brownfield, O.D., has been practicing with Dishler Laser Institute since 2001. She received her Bachelor of Science degree in zoology from Iowa State University and then graduated from the Illinois College of Optometry with honors. Dr. Brownfield has managed over 10,000 refractive surgery patients and had IntraLASIK herself in 2001. She is an adjunct professor at the Illinois College of Optometry, lectures on new LASIK technologies, and has been a clinical investigator in multiple refractive surgery trials. Dr. Brownfield currently resides in Parker, Colorado with her husband and two daughters.</p>
+                            <h3>Meagan J. Petraitis</h3>
+                            <p>Meagan J. Petraitis, O.D., joined Dishler Laser Institute in 2008 after graduating with honors from the Illinois College of Optometry in Chicago. Prior to optometry school, she received her Bachelor of Arts degree in microbiology from Miami University in Oxford, Ohio, where she also minored in Spanish. Dr. Petraitis is an adjunct professor at the Illinois College of Optometry and is an active member of the Colorado optometric Association serving as the Chairperson for the Colorado Vision Summit Paraoptometric Program. Dr. Petratis currently resides in Parker, Colorado with her husband, also an optometrist, her son and two dogs. </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <a name="testimonials" id="testimonials"></a>
+        <div class="testimonials_section">
+            <div class="border"></div>
+            <div class="itop"><a href="#tour" class="anchorLink"><i class="fa fa-chevron-up"></i></a></div>
+            <div class="border"></div>
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="head">
+                            <div class="bor-top"></div>
+                            <h2>Testimonials</h2>
+                            <div class="bor"></div>
+                        </div>
+
+                    </div>
+                    <div id="client-feedbacks" class="col-md-12">
+                        <div class="col-md-4">
+                            <div class="bubble_wrapper">
+                                <div class="bubble blue_bubble">
+                                    <i class="fa fa-quote-left"></i> 20/15 both eyes! What else can you ask for? My entire experience with Dishler Laser was fantastic from the first consultation to the final check up. I did lots of research before choosing Dishler and was very happy I did. <i class="fa fa-quote-right"></i>
+                                </div>
+                                <h4>~Charlie (10/29/2014)</h4>
+                            </div>
+                        </div>
+                        <!--  <div class="testimonials">
+             <p><i class="fa fa-quote-left"></i> 20/15 both eyes! What else can you ask for? My entire experience with Dishler Laser was fantastic from the first consultation to the final check up. I did lots of research before choosing Dishler and was very happy I did. <i class="fa fa-quote-right"></i></p>
+             <h4>~Charlie (10/29/2014)</h4>
+          </div>-->
+                        <div class="col-md-4">
+                            <div class="bubble_wrapper">
+                                <div class="bubble white_bubble">
+                                    <i class="fa fa-quote-left"></i> I had an excellent experience at Dishler Laser. The staff is professional, courteous, and attentive to my needs as a patient. The procedure was fast and I felt very comfortable in the very capable hands of Dr. Dishler and his team. The whole team appears genuinely interested in me as a patient, not as just another customer. My experience with Dishler Laser far exceeded my expectations. <i class="fa fa-quote-right"></i>
+                                </div>
+                                <h4>~Michael G (10/16/2014)</h4>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="bubble_wrapper">
+                                <div class="bubble blue_bubble">
+                                    <i class="fa fa-quote-left"></i> Everyone was wonderful. Everyone is so courteous and their customer service was great. This was one of the best things I've ever done. <i class="fa fa-quote-right"></i>
+                                </div>
+                                <h4>~Tara S (08/21/2014)</h4>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+        <a name="financing" id="financing"></a>
+        <div class="financing_section">
+            <div class="border"></div>
+            <div class="itop"><a href="#consultation" class="anchorLink"><i class="fa fa-chevron-up"></i></a></div>
+            <div class="border"></div>
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="head">
+                            <div class="bor-top"></div>
+                            <h2>Financing</h2>
+                            <div class="bor"></div>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="financing">
+                            <h4><i class="fa fa-credit-card"></i> Payment Options</h4>
+                            <ul>
+                                <li>Financing Through Care Credit</li>
+                                <li>FLEX spending and HSA Dollars accepted</li>
+                                <li>We accept all major credit cards </li>
+                            </ul>
+                            <hr />
+                            <h4>Special Financing and Payment Options Available:</h4>
+                            <p>Say YES to LASIK with no interest payment plans.  We offer LASIK financing for up to 24 months*. The application process is quick, convenient and confidential. Ninety-eight percent of all applicants are approved, no money is due at signing and there are no penalties or fees for pre-payment. Contact us today to apply.</p>
+                            <p style="font-size: 10px">Subject to credit approval. Minimum monthly payments required. See store for details.</p>
+                            <div class="left">
+                                <h4>CareCredit®</h4>
+                                <p>CareCredit is a flexible LASIK financing solution that allows you to have your LASIK procedure when you are ready and pay it off in affordable monthly installments. With CareCredit you can focus on your vision rather than worrying about payment.</p>
+                            </div>
+                            <div class="right">
+                                <iframe width="100%" height="150" frameborder="0" src="http://107.170.65.68/ic3d/dishler/calculator_small.html" allowfullscreen=""></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <a name="technology" id="technology"></a>
+        <div class="technology_section">
+            <div class="border"></div>
+            <div class="itop"><a href="#tour" class="anchorLink"><i class="fa fa-chevron-up"></i></a></div>
+            <div class="border"></div>
+
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="head">
+                            <div class="bor-top"></div>
+                            <h2>The Latest  Technology</h2>
+                            <div class="bor"></div>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="technology-gallery well">
+                            <div class="col-md-4">
+                                <h3>ZEISS VISUMAX® FS</h3>
+                                <img src="http://107.170.65.68/ic3d/dishler/img/photos/ZEISS_VISUMAX.jpg" alt="ZEISS VISUMAX® FS" />
+                            </div>
+                            <div class="col-md-4">
+                                <h3>ZEISS MEL 80™</h3>
+                                <img src="http://107.170.65.68/ic3d/dishler/img/photos/ZEISS_MEL.jpg" alt="ZEISS MEL 80™" />
+                            </div>
+                            <div class="col-md-4">
+                                <h3>ALLEGRETTO WAVE®</h3>
+                                <img src="http://107.170.65.68/ic3d/dishler/img/photos/ALLEGRETTO_WAVE.jpg" alt="ALLEGRETTO WAVE®" />
+                            </div>
+                        </div>
+                        <div class="technology-desc col-md-12">
+                            <p>In 2007, Dr. Dishler was the first in the U.S. and all of North America to acquire and help develop the Zeiss Optics laser technology, making him the most experienced surgeon in America to utilize Zeiss Optic Technology. </p>
+                            <p>We remain committed to technological innovation for the benefit of our patients and offer an unsurpassed array of high-technology tools for corrective eye surgery. We are the only practice with our own state licensed on-site ambulatory surgery center, so there is no need for our patients to travel to an off-site surgical center for Denver LASIK.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <a name="faqs" id="faqs"></a>
+        <div class="faqs_section">
+            <div class="border"></div>
+            <div class="itop"><a href="#tour" class="anchorLink"><i class="fa fa-chevron-up"></i></a></div>
+            <div class="border"></div>
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="head">
+                            <div class="bor-top"></div>
+                            <h2>Frequently Asked Questions</h2>
+                            <div class="bor"></div>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div id="faqContent" class="well">
+                            <!-- Contact details -->
+                            <h3>Is corrective eye surgery painful?</h3>
+                            <p>Before corrective eye surgery, we always administer anesthetic eye drops and other medications designed to ensure a calm, comfortable procedure. Most patients report that treatment is fast, easy, with little discomfort. After LASIK, patients experience mild discomfort during the early stages of recovery.  But with rest and sleep, the next morning most people can see well enough to go to work the next day.</p>
+
+                            <h3>How long will it take me to recover?</h3>
+                            <p>Most patients notice improved vision the same day and are able to return to most normal activities the next day. Patients typically notice significant improvements over the first week, but it can take up to a month for full recovery. Every patient’s recovery from LASIK surgery is different. Some patients take longer to heal and experience improvements in vision and comfort over longer periods of time.</p>
+
+                            <h3>How good will my vision be after LASIK?</h3>
+                            <p>While it is difficult to predict the exact outcome of any procedure in advance, our patients reliably achieve excellent vision after surgery. Our results are simply clearer with an enhancement rate of less than 2% and a patient satisfaction rate of 98% .</p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="bottom_section">
+            <div class="border"></div>
+            <div class="itop"><a href="#tour" class="anchorLink"><i class="fa fa-chevron-up"></i></a></div>
+            <div class="border"></div>
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="head">
+                            <div class="bor-top"></div>
+                            <h2>Contact Us</h2>
+                            <div class="bor"></div>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div id="ctaContent" class="well text-center">
+                            <p align="center">Whether you are interested in LASIK or PRK, we at the Dishler Laser Institute want to make sure that you have all the information you need. If you have any remaining questions, our staff is happy to help you - please give us a call! </p>
+                            <img src="http://107.170.65.68/ic3d/dishler/img/photos/dishler_bottom.jpg" alt="Jon G. Dishler" />
+                            <h3 align="center">DISHLER LASER INSTITUTE</h3>
+                            <p align="center">(303) 793-3000<br />8400 E. Prentice Ave. Ste. 1200<br />Greenwood Village, CO 80111<br /><a href="https://www.google.com/maps/place/8400+E+Prentice+Ave+%231200,+Greenwood+Village,+CO+80111/@39.619501,-104.891093,17z/data=!3m1!4b1!4m2!3m1!1s0x876c86581de0b195:0x9f25e362cc9594bb?hl=en">Show Map</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="border"></div>
+        <hr />
+        <div class="itop"><a href="#tour" class="anchorLink"><i class="fa fa-chevron-up"></i></a></div>
+
+    </div>
+   
+<!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+            <p>Powered by <img src="img/logo_iC3Dhealth.png" width="20"/><a href="http://www.ic3dhealth.com" target="_blank">iC3D Health</a></p>
+            <div class="border"></div>
+      </div>
+    </div>
+  <div class="clearfix"></div>
+  </div>
+</footer>		
+
+<div class="modal fade bs-example-modal-sm" id="modalError" tabindex="-1" role="dialog" aria-labelledby="modalError" aria-hidden="true">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h5 class="modal-title" id="myModalLabel"><b>Alert message</b></h5>
+            </div>
+            <div class="modal-body">
+                ....
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- JS -->
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.flexslider-min.js"></script>
+<script src="js/jquery.rowsorter.js"></script>
+<script src="js/jquery.anchor.js"></script>
+<script src="js/custom.js"></script>
+
+<script>
+// Cache selectors
+var lastId,
+    topMenu = $("#top-menu"),
+    topMenuHeight = topMenu.outerHeight()+15,
+    // All list items
+    menuItems = topMenu.find("a"),
+    // Anchors corresponding to menu items
+    scrollItems = menuItems.map(function(){
+      var item = $($(this).attr("href"));
+      if (item.length) { return item; }
+    });
+
+// Bind click handler to menu items
+// so we can get a fancy scroll animation
+menuItems.click(function(e){
+  var href = $(this).attr("href"),
+      offsetTop = href === "#" ? 0 : $(href).offset().top-topMenuHeight+1;
+  $('html, body').stop().animate({ 
+      scrollTop: offsetTop
+  }, 1000);
+  e.preventDefault();
+});
+
+// Bind to scroll
+$(window).scroll(function(){
+   // Get container scroll position
+   var fromTop = $(this).scrollTop()+topMenuHeight;
+   
+   // Get id of current scroll item
+   var cur = scrollItems.map(function(){
+     if ($(this).offset().top < fromTop)
+       return this;
+   });
+   // Get the id of the current element
+   cur = cur[cur.length-1];
+   var id = cur && cur.length ? cur[0].id : "";
+   
+   if (lastId !== id) {
+       lastId = id;
+       // Set/remove active class
+       menuItems
+         .parent().removeClass("active")
+         .end().filter("[href=#"+id+"]").parent().addClass("active");
+   }                   
+});
+ </script>
+</body>
+</html>

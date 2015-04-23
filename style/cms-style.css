@@ -1,0 +1,53 @@
+﻿#cmsBuilder {
+
+}
+
+.preLoad-wrap {
+background-color: rgba(102, 171, 228, 0.8);
+position: fixed;
+left: 0px;
+right: 0px;
+bottom: 0px;
+top: 0px;
+font-size: 200%;
+padding-top: 24%;
+text-align: center;
+color: #fff;
+z-index: 9999;
+}
+
+.navbar, #page-wrapper {
+    display:none;
+}
+
+
+.form-group {
+    margin-bottom:10px;
+}
+
+textarea {
+    min-height:150px;
+}
+
+input.token {
+    min-height:0px;
+    padding:0px;
+    margin:0px;
+    background-color:transparent;
+    border:0px;
+    cursor:pointer;
+    display:inline-block;
+}
+
+table.sorted_table tr td:first-child {
+cursor: move;
+}
+
+table tr td textarea {
+    min-height:80px;
+}
+
+.change-img {
+cursor: pointer;
+}
+

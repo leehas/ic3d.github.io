@@ -1,0 +1,24 @@
+<!-- Small calculator html -->
+<style>
+ #calculator_small { width:250px; margin:0 0 0 0; padding:0 0 0 0; background: url(http://carecredit.com/payment_calculator/images_small/calc_body-bgrd.gif) repeat-y top left;}
+ #searchArea { width:220px; margin:0 0 0 12px; padding:0 0 0 0;}
+ form { margin:0 0 0 0; padding:0 0 0 0; }
+</style>
+<div id="calculator_small">
+<img src="http://carecredit.com/payment_calculator/images_small/calc_body-top.gif" width="250" height="69" border="0" alt="Calculate your low monthly payment.">
+<div id="searchArea">
+<form method='get' action='http://www.carecredit.com/payment_calculator/template.html' target="_blank">
+	<input type="text" name='amount' value='$' size="16" style=" vertical-align:middle;"/>
+<!-- if you have your own stylesheet, you can enter it here, otherwise you can skip this bit below -->
+	<input type='hidden' name='ss' value='http://carecredit.com/payment_calculator/template.css' />
+<!-- end optional stylesheet -->
+<!-- you can determine the plans returned by changing the value of ASPS below.  
+         value='0' will return all plans
+		 value='1' will return only two plans -->
+    <input type='hidden' name='ASPS' value='0' />
+    <input type='hidden' name='keys' value='vision' />
+<!-- End ASPS option -->
+<input type="image" src="http://carecredit.com/payment_calculator/images_small/button_calculate.gif" style="margin-top:0px; vertical-align:middle;" />
+</form>
+</div><img src="http://carecredit.com/payment_calculator/images_small/calc_body-bot.gif" width="250" height="14" border="0" alt=""></div>
+<!-- .Small calculator html -->
