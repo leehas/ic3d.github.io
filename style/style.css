@@ -1,0 +1,592 @@
+@import url(http://fonts.googleapis.com/css?family=Droid+Serif:400,700);
+@import url(http://fonts.googleapis.com/css?family=Droid+Sans:400,700);
+
+body{
+
+padding-top:40px;
+font-family: 'Droid Sans', Arial, Helvetica, sans-serif;
+-webkit-animation-delay: 10s;
+-moz-animation-delay: 10s;
+-o-animation-delay: 10s;
+-ms-animation-delay: 10s;
+animation-delay: 10s;
+color:#666;
+font-size:15px;
+line-height:25px;
+}
+
+h1,h2,h3,h4,h5,h6{
+font-family: "Droid Serif", Georgia, "Times New Roman", serif;
+font-weight:normal;
+-webkit-animation-delay: 10s;
+-moz-animation-delay: 10s;
+-o-animation-delay: 10s;
+-ms-animation-delay: 10s;
+animation-delay: 10s;
+}
+
+h1{
+font-size:50px;
+line-height:75px;
+}
+
+h2{
+font-size:35px;
+line-height:45px;
+}
+
+h3{
+font-size:22px;
+line-height:28px;
+}
+
+h4{
+font-size:18px;
+line-height:24px;
+}
+
+h5{
+font-size:14px;
+line-height:20px;
+}
+
+p{
+margin:5px 0px;
+}
+
+.tour { text-align: center }
+.consultation_section, .optometrists_section, .financing_section, .faqs_section { background-color: rgba(102, 171, 228, 0.2); padding-bottom: 30px }
+.tour_section, .doctor_section, .testimonials_section, .technology_section { padding-bottom: 30px }
+
+.left{ width: 65%; float: left; padding-top: 20px }
+.left h2 { text-align: center }
+.left p { text-align: left }
+.right { width: 30%; margin-left: 5%; float: right; padding-top: 20px }
+.right img { width: 96%; margin-bottom: 20px }
+
+a, a:visited{
+color:#557d0d;
+}
+
+.big-link { font-size: 18px }
+
+a:hover{
+color:#406903 ;
+}
+
+form{
+margin:15px 0px;
+margin-left:-15px;
+}
+
+.fa-quote-left, .fa-quote-right { font-size: 12px; position: relative; }
+.fa-quote-left { top: -3px; padding-right: 3px;}
+.fa-quote-right { top: 3px; padding-left: 3px;}
+
+.btn-sm{
+	margin-left:0px;
+}
+
+.border{
+height:20px;
+}
+
+.color{
+color:#406903;
+}
+
+a:hover,a:active,a:focus {
+outline: 0;
+}
+
+:focus {outline:none;}
+
+::-moz-focus-inner {border:0;}
+
+
+.well{
+background:url('http://107.170.65.68/ic3d/dishler/img/grey.png') repeat;
+border-radius:15px;
+border:1px solid #ddd;
+padding:10px 20px;
+box-shadow:inset 0px 0px 1px #ccc;
+display: inline-block;
+width: 100%;
+}
+
+.well img { width: 100% }
+
+.bor, .bor-top{
+background-size:240px 20px;
+height:20px;
+width:240px;
+margin:0 auto;
+}
+
+ .ul_wrapper{ text-align: left }
+
+.bor{
+	background:url('http://107.170.65.68/ic3d/dishler/img/separator.png') no-repeat center center;
+}
+
+.bor-top{
+background:url('http://107.170.65.68/ic3d/dishler/img/separator-top.png') no-repeat center center;
+}
+
+.itop{
+width:20px;
+margin:0 auto;
+text-align:center;
+position:relative;
+top:-32px;
+border:1px solid #ddd;
+height:20px;
+background:#eee;
+border-radius:30px;
+font-size:12px;
+line-height:16px;
+cursor: pointer;
+}
+
+.itop a{
+color:#aaa;
+}
+
+.itop a:hover{
+text-decoration:none;
+}
+
+/* Image alignment*/
+
+.alignleft, img.alignleft {
+margin-right: 8px;
+margin-top:5px;
+display: inline;
+float: left;
+}
+
+.alignright, img.alignright {
+margin-left: 8px;
+margin-top:5px;
+display: inline;
+float: right;
+}
+   
+.aligncenter, img.aligncenter {
+margin-right: auto;
+margin-left: auto;
+display: block;
+clear: both;
+}
+
+.button{
+margin:10px 0px;
+}
+
+.button a, .button a:visited{
+background:#224004;
+color:#fff;
+width:100px;
+padding:6px 15px;
+font-size:14px;
+font-weight:700;
+border-radius:5px;
+border-bottom:2px solid #152e06;
+}
+
+.button a:hover{
+background:#152e06;
+text-decoration:none;
+}
+
+.container{
+	width:1000px;
+}
+
+/* Navigation */
+
+.navbar{
+border-radius:0px;
+background: #66abe4 !important; 
+background-image: none;
+background-repeat: no-repeat;
+filter: none !important;
+border:none !important;
+border-bottom:1px solid #000 !important;
+}
+
+.navbar .nav, .navbar .nav > li {
+float:none;
+display:inline-block;
+
+vertical-align: top;
+}
+
+.navbar {
+text-align:center;
+}
+
+.navbar button{
+background:#4A6BA4 !important; 
+padding:7px; 
+border:none;
+}
+
+.navbar button:hover{
+background:#445E8C !important;
+}
+
+.navbar .caret{
+border-top-color:#fff !important;
+border-bottom-color:#fff !important;
+}
+
+.navbar .nav > li > a{
+padding: 16px 15px 15px 15px; 
+color:#fff !important;
+text-shadow:none !important;
+font-size:15px;
+font-weight:700 !important;
+}
+
+.navbar .nav > li > a:hover{
+background:#5893c3 !important;
+color:#fff !important;
+}
+
+.navbar .nav .active > a,
+.navbar .nav .active > a:hover,
+.navbar .nav .active > a:focus,
+.nav a.active {
+color: #ffffff;
+box-shadow:none;
+background: #5893c3 !important;
+}
+
+.dropdown-toggle{
+background: #406903 !important;
+}
+
+.navbar-collapse a{
+font-weight:normal !important;
+text-shadow:none !important;
+}
+
+.dropdown-menu{
+background:#406903 !important;
+}
+
+.dropdown-menu a{
+color:#fff !important;
+text-shadow:none !important;
+}
+
+.dropdown-menu a:hover{
+filter:none !important;
+background:#406903 !important;
+}
+
+/* Header */
+
+header{
+background-image: url("../img/photos/background.jpg");
+background-size: cover;
+height:550px;
+text-align:center;
+padding-top:70px;
+color:#fff;
+margin-bottom:0px;
+border-bottom:1px solid #000;
+}
+
+header h1{
+text-shadow:0px 0px 1px #000;
+}
+
+header h2 span{
+color:#777;
+}
+
+header .well{
+color:#666;
+background:#fff url('http://107.170.65.68/ic3d/dishler/img/well.png') repeat;
+padding:13px 15px;
+box-shadow:inset 0px 0px 2px #111;
+display:inline-block;
+border-radius:10px;
+max-width:600px;
+font-size:15px;
+line-height:24px;
+}
+
+header h3{
+font-size:18px;
+line-height:23px;
+}
+
+header .hero img{
+	max-width:40px;
+}
+
+/* Head */
+
+.head{
+text-align:center;
+margin-bottom:20px;
+}
+
+/* Slider */
+
+
+.flexslider  ul li{
+background-image:none;
+padding:0px;
+}
+
+.flexslider{
+margin-top:10px;
+margin-bottom:15px;
+border:1px solid #bbb;
+padding:1px;
+border-radius:0px;
+box-shadow:none;
+}
+
+.flexslider .flex-control-nav{
+bottom:0px;
+}
+
+.flex-control-paging li a{
+background:#fff;
+box-shadow:0px 0px 3px #555;
+}
+
+.flex-control-paging li a:hover{
+background:#ccc;
+}
+
+.flex-control-paging li a.flex-active{
+background:#ccc;
+}
+
+.flexslider .slides > li {
+position:relative;
+}
+
+.flex-caption{
+	width: 80%;
+	padding: 10px;
+	margin: 0 0 40px 40px;
+	background-color: #222;
+	background: rgba(0, 0, 0, 0.8);
+	position: absolute;
+	display: block;
+	left: 0;
+	bottom: 0;
+}
+
+.flex-caption h3 {
+font-family: 'Droid Sans', Arial, Helvetica, sans-serif;
+	color: #fff;
+	padding-bottom: 5px;
+	margin:0;
+   margin-bottom:3px;
+}
+
+.flex-caption h3 span{
+   padding-bottom:3px;
+}
+	
+.flex-caption p {
+	margin:0;
+	line-height: 19px;
+	color: #ddd;
+}
+
+/* About */
+
+.testimonials, .financing, .optometrists{
+padding:10px 20px;
+background:#fafafa url('http://107.170.65.68/ic3d/dishler/img/wave.png') repeat;
+border:1px solid #eee;
+border-radius:10px;
+margin-bottom:15px;
+display: inline-block;
+}
+
+.conditions-procedures, .video_wrapper{ width: 100% }
+
+.blue_bubble { background: #dfedf9; }
+.blue_bubble.bubble:after {border-color: #dfedf9 transparent;}
+
+.white_bubble { background: #fff; }
+.white_bubble.bubble:after {border-color: #fff transparent;}
+
+.bubble 
+{
+position: relative;
+width: 100%;
+height: auto;
+padding: 10px 15px;
+-webkit-border-radius: 22px;
+-moz-border-radius: 22px;
+border-radius: 22px;
+border: #7E7F7F solid 2px;
+margin-bottom: 30px;
+}
+
+.bubble:after 
+{
+content: '';
+position: absolute;
+border-style: solid;
+border-width: 15px 15px 0;
+display: block;
+width: 0;
+z-index: 1;
+bottom: -15px;
+left: 49px;
+}
+
+.bubble:before 
+{
+content: '';
+position: absolute;
+border-style: solid;
+border-width: 17px 17px 0;
+border-color: #7E7F7F transparent;
+display: block;
+width: 0;
+z-index: 0;
+bottom: -18px;
+left: 47px;
+}
+
+.doctor h3{
+font-weight:700;
+}
+
+.doctor .ameta{
+color:#888;
+font-weight:normal;
+font-family: 'Droid Sans', Arial, Helvetica, sans-serif;
+font-size:13px;
+line-height:20px;
+}
+
+/* our-practice */
+
+.our-practice{
+padding:10px 20px;
+background:#fafafa url('http://107.170.65.68/ic3d/dishler/img/wave.png') repeat;
+border-radius:10px;
+margin-bottom:10px;
+border:1px solid #eee;
+display: inline-block;
+width: 100%;
+}
+
+.our-practice h4 i{
+margin-top:4px;
+margin-right:2px;
+}
+
+/* Form */
+
+form button{
+margin-left:15px;
+}
+
+/* Footer */
+
+
+/* Responsive */
+
+@media (max-width: 480px){
+   header{
+   padding-top:20px !important;
+   }
+   .navbar .nav, .navbar .nav > li {
+   float:left;
+   display:block;
+   }  
+   .navbar{
+   text-align:left;
+   }
+   .flex-caption{
+   display:none;
+   }   
+   
+   
+}
+
+@media (max-width: 450px){
+	.hero h2 { font-size: 26px; line-height: 32px }
+}
+
+@media (max-width: 379px){
+	.hero h2 { font-size: 22px; line-height: 30px }
+}
+
+@media (max-width: 767px){
+   .container{
+	width:100%;
+   }
+   header{
+   padding-top:50px;
+   }
+   header h1{
+   font-size:35px;
+   line-height:53px;
+   text-shadow:none;
+   }
+   header .well{
+   margin:5px 10px;
+   }
+   .navbar .nav, .navbar .nav > li {
+   float:none;
+   display:block;;
+   }  
+   .navbar{
+   text-align:left;
+   }  
+    
+   .wedding{
+   text-align:center;
+   max-width:350px;
+   margin:10px auto;
+   }   
+   form button{
+   margin-left:0px;
+   }   
+   
+   .left{ width: 100%; float: none }
+   .left p, .left h2 { text-align: center }
+   .right { width: 100%; text-align:center; float: none; margin: auto }
+   .right img { margin: 20px auto 0 auto; max-width: 320px}
+   
+  
+   
+   
+}
+
+@media (min-width: 768px) and (max-width: 979px){
+   .container{
+	width:100%;
+   }
+   
+   
+   .navbar{
+   text-align:center;
+   }   
+   
+  
+}
+
+@media (max-width: 979px){
+	header { background-size: cover; height:auto }
+}
+
+#editBack {
+    position:fixed; left:-8px; bottom:20px
+}
