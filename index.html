@@ -25,7 +25,7 @@
   <!-- Favicon -->
   <link rel="shortcut icon" href="img/favicon/favicon.png">
 
-    <link href="style/cms-style.css" rel="stylesheet" />
+  <link href="style/cms-style.css" rel="stylesheet" />
 
 </head>
 
@@ -43,64 +43,124 @@
         </div>
 
         <!-- Menu Items -->
-        <div class="row">
+        <div class="row cmsMenuItems">
             <div class="col-lg-12">
                 <h4>Update Menu Titles</h4>
             </div>
 
             <div class="col-lg-3">
                 <div class="form-group">
-                    <input class="form-control" type="text" id="menu1" name="menu1" placeholder="Menu 1" value="Tour" />
+                    <div class="input-group">
+                        <span class="input-group-addon">
+                            <input type="checkbox" aria-label="menu1" checked>
+                        </span>
+                        <input class="form-control" type="text" id="menu1" name="menu1" placeholder="Menu 1" value="Tour" />
+                    </div>
                 </div>
             </div>
 
             <div class="col-lg-3">
                 <div class="form-group">
-                    <input class="form-control" type="text" id="menu2" name="menu2" placeholder="Menu 2" value="Consultation" />
+                    <div class="input-group">
+                        <span class="input-group-addon">
+                            <input type="checkbox" aria-label="menu2" checked>
+                        </span>
+                        <input class="form-control" type="text" id="menu2" name="menu2" placeholder="Menu 2" value="Consultation" />
+                    </div>
                 </div>
             </div>
 
             <div class="col-lg-3">
                 <div class="form-group">
-                    <input class="form-control" type="text" id="menu3" name="menu3" placeholder="Menu 3" value="Doctor" />
+                    <div class="input-group">
+                        <span class="input-group-addon">
+                            <input type="checkbox" aria-label="menu3" checked>
+                        </span>
+                        <input class="form-control" type="text" id="menu3" name="menu3" placeholder="Menu 3" value="Doctor" />
+                    </div>
                 </div>
             </div>
 
             <div class="col-lg-3">
                 <div class="form-group">
-                    <input class="form-control" type="text" id="menu4" name="menu4" placeholder="Menu 4" value="Optometrists" />
+                    <div class="input-group">
+                        <span class="input-group-addon">
+                            <input type="checkbox" aria-label="menu4" checked>
+                        </span>
+                        <input class="form-control" type="text" id="menu4" name="menu4" placeholder="Menu 4" value="Optometrists" />
+                    </div>
                 </div>
             </div>
 
             <div class="col-lg-3">
                 <div class="form-group">
-                    <input class="form-control" type="text" id="menu5" name="menu5" placeholder="Menu 5" value="Testimonials" />
+                    <div class="input-group">
+                        <span class="input-group-addon">
+                            <input type="checkbox" aria-label="menu5" checked>
+                        </span>
+                        <input class="form-control" type="text" id="menu5" name="menu5" placeholder="Menu 5" value="Testimonials" />
+                    </div>
                 </div>
             </div>
 
             <div class="col-lg-3">
                 <div class="form-group">
-                    <input class="form-control" type="text" id="menu6" name="menu6" placeholder="Menu 6" value="Financing" />
+                    <div class="input-group">
+                        <span class="input-group-addon">
+                            <input type="checkbox" aria-label="menu6" checked>
+                        </span>
+                        <input class="form-control" type="text" id="menu6" name="menu6" placeholder="Menu 6" value="Financing" />
+                    </div>
                 </div>
             </div>
 
             <div class="col-lg-3">
                 <div class="form-group">
-                    <input class="form-control" type="text" id="menu7" name="menu7" placeholder="Menu 7" value="Technology" />
+                    <div class="input-group">
+                        <span class="input-group-addon">
+                            <input type="checkbox" aria-label="menu7" checked>
+                        </span>
+                        <input class="form-control" type="text" id="menu7" name="menu7" placeholder="Menu 7" value="Technology" />
+                    </div>
                 </div>
             </div>
 
             <div class="col-lg-3">
                 <div class="form-group">
-                    <input class="form-control" type="text" id="menu8" name="menu8" placeholder="Menu 8" value="FAQs" />
+                    <div class="input-group">
+                        <span class="input-group-addon">
+                            <input type="checkbox" aria-label="menu8" checked>
+                        </span>
+                        <input class="form-control" type="text" id="menu8" name="menu8" placeholder="Menu 8" value="FAQs" />
+                    </div>
                 </div>
             </div>
-
         </div>
 
-        <hr />    
-        
-        <!-- Consultation Overview -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h4>Update Menu Background Color</h4>
+            </div>
+            <div class="col-lg-3">
+                <div class="form-group">
+                   BgColor: <input class="form-control color" type="text" id="menuBgColor" name="menuBgColor" value="66abe4" />
+                </div> 
+            </div>
+            <div class="col-lg-3">
+                <div class="form-group">
+                    ActiveColor: <input class="form-control color" type="text" id="menuActiveColor" name="menuActiveColor" value="5893c3" />
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="form-group">
+                    TextColor: <input class="form-control color" type="text" id="menuTextColor" name="menuTextColor" value="ffffff" />
+                </div>
+            </div>
+        </div>
+
+            <hr />
+
+            <!-- Consultation Overview -->
             <div class="row">
                 <div class="col-lg-12">
                     <h4>Consultation Overview</h4>
@@ -171,7 +231,7 @@
                         </div>
                     </div>
 
-                    
+
                 </div>
             </div>
 
@@ -189,9 +249,9 @@
                         <div class="col-lg-11">
                             <div class="panel panel-default">
                                 <div class="panel-heading">
-                                    <h4 class="panel-title"><a name="bmcollapse2020Vision" href=".collapse2020Vision" xt="SPBOOKMARK" data-parent="#accordion" data-toggle="collapse">20/20 Vision</a></h4>
+                                    <h4 class="panel-title"><a name="bmcollapse2020Vision" href=".collapse2020Vision" xt="SPBOOKMARK" data-parent="#accordion" data-toggle="collapse">20/20 Vision <i class="fa fa-minus"></i></a></h4>
                                 </div>
-                                <div class="panel-collapse collapse collapse2020Vision">
+                                <div class="panel-collapse collapse in collapse2020Vision">
                                     <div class="panel-body">
                                         <p>20/20 vision is a term used to express normal visual acuity (the clarity or sharpness of vision) measured at a distance of 20 feet. If you have 20/20 vision, you can see clearly at 20 feet what should normally be seen at that distance. If you have 20/100 vision, it means that you must be as close as 20 feet to see what a person with normal vision can see at 100 feet.</p>
                                         <iframe class="video_wrapper" height="480" frameborder="0" width="640" allowfullscreen="" src="https://www.youtube.com/embed/T3VD4o9sBSw?rel=0"></iframe>
@@ -206,9 +266,9 @@
                         <div class="col-lg-11">
                             <div class="panel panel-default">
                                 <div class="panel-heading">
-                                    <h4 class="panel-title"><a name="bmcollapseMyopia" href=".collapseMyopia" xt="SPBOOKMARK" data-parent="#accordion" data-toggle="collapse">Myopia (Nearsightedness)</a></h4>
+                                    <h4 class="panel-title"><a name="bmcollapseMyopia" href=".collapseMyopia" xt="SPBOOKMARK" data-parent="#accordion" data-toggle="collapse">Myopia (Nearsightedness) <i class="fa fa-minus"></i></a></h4>
                                 </div>
-                                <div class="panel-collapse collapse collapseMyopia">
+                                <div class="panel-collapse collapse in collapseMyopia">
                                     <div class="panel-body">
                                         <p>Nearsightedness or myopia is a condition in which close objects are seen clearly, but objects farther away appear blurred. This is because the eyeball is too long relative to the focusing power of the cornea and the lens of the eye, and the image falls in front of the retina. Myopia is a fairly common condition and one that can be corrected through the refractive surgery options available.</p>
                                         <iframe class="video_wrapper" height="480" frameborder="0" width="640" allowfullscreen="" src="https://www.youtube.com/embed/OujFzowzasA?rel=0"></iframe>
@@ -223,9 +283,9 @@
                         <div class="col-lg-11">
                             <div class="panel panel-default">
                                 <div class="panel-heading">
-                                    <h4 class="panel-title"><a name="bmcollapseAstigmatism" href=".collapseAstigmatism" xt="SPBOOKMARK" data-parent="#accordion" data-toggle="collapse">Astigmatism</a></h4>
+                                    <h4 class="panel-title"><a name="bmcollapseAstigmatism" href=".collapseAstigmatism" xt="SPBOOKMARK" data-parent="#accordion" data-toggle="collapse">Astigmatism <i class="fa fa-minus"></i></a></h4>
                                 </div>
-                                <div class="panel-collapse collapse collapseAstigmatism">
+                                <div class="panel-collapse collapse in collapseAstigmatism">
                                     <div class="panel-body">
                                         <p>Astigmatism occurs when the image of an object is not focused on the central part of the retina. This is a result of a cornea which is shaped like a cylinder rather than a sphere. This results in vision that is blurred at all distances but especially at far.</p>
                                         <iframe class="video_wrapper" height="480" frameborder="0" width="640" allowfullscreen="" src="https://www.youtube.com/embed/AepsPWtLnLc?rel=0"></iframe>
@@ -240,9 +300,9 @@
                         <div class="col-lg-11">
                             <div class="panel panel-default">
                                 <div class="panel-heading">
-                                    <h4 class="panel-title"><a name="bmcollapseHyperopia" href=".collapseHyperopia" xt="SPBOOKMARK" data-parent="#accordion" data-toggle="collapse">Hyperopia (Farsightedness)</a></h4>
+                                    <h4 class="panel-title"><a name="bmcollapseHyperopia" href=".collapseHyperopia" xt="SPBOOKMARK" data-parent="#accordion" data-toggle="collapse">Hyperopia (Farsightedness) <i class="fa fa-minus"></i></a></h4>
                                 </div>
-                                <div class="panel-collapse collapse collapseHyperopia">
+                                <div class="panel-collapse collapse in collapseHyperopia">
                                     <div class="panel-body">
                                         <p>Farsightedness is a condition in which distant objects may be seen relatively clearly, but close objects do not come into proper focus. This occurs when your eyeball is too short or the cornea is too flat. As a result, the light entering your eye is focused behind the retina. This condition can mimic or aggravate the need for reading glasses which is observed with the normal aging process.</p>
                                         <iframe class="video_wrapper" height="480" frameborder="0" width="640" allowfullscreen="" src="https://www.youtube.com/embed/fXcUIhgA8Zc?rel=0"</iframe>
@@ -257,9 +317,9 @@
                         <div class="col-lg-11">
                             <div class="panel panel-default">
                                 <div class="panel-heading">
-                                    <h4 class="panel-title"><a name="bmcollapsePresbyopia" href=".collapsePresbyopia" xt="SPBOOKMARK" data-parent="#accordion" data-toggle="collapse">Presbyopia</a></h4>
+                                    <h4 class="panel-title"><a name="bmcollapsePresbyopia" href=".collapsePresbyopia" xt="SPBOOKMARK" data-parent="#accordion" data-toggle="collapse">Presbyopia <i class="fa fa-minus"></i></a></h4>
                                 </div>
-                                <div class="panel-collapse collapse collapsePresbyopia">
+                                <div class="panel-collapse collapse in collapsePresbyopia">
                                     <div class="panel-body">
                                         <p>Presbyopia is a condition in which the lens of your eye loses its flexibility making focusing on near objects difficult. Presbyopia is a natural occurring aging process which usually manifests itself in the early to mid-40s.</p>
                                         <iframe class="video_wrapper" height="480" frameborder="0" width="640" allowfullscreen="" src="https://www.youtube.com/embed/71etxv9uqhI?rel=0"></iframe>
@@ -274,9 +334,9 @@
                         <div class="col-lg-11">
                             <div class="panel panel-default">
                                 <div class="panel-heading">
-                                    <h4 class="panel-title"><a name="bmcollapseCataracts" href=".collapseCataracts" xt="SPBOOKMARK" data-parent="#accordion" data-toggle="collapse">Cataracts</a></h4>
+                                    <h4 class="panel-title"><a name="bmcollapseCataracts" href=".collapseCataracts" xt="SPBOOKMARK" data-parent="#accordion" data-toggle="collapse">Cataracts <i class="fa fa-minus"></i></a></h4>
                                 </div>
-                                <div class="panel-collapse collapse collapseCataracts">
+                                <div class="panel-collapse collapse in collapseCataracts">
                                     <div class="panel-body">
                                         <p>Cataract is a natural aging process of the eye where the crystalline lens becomes progressively cloudy. During the cataract surgery, this cloudy lens is replaced with a specialized intraocular artificial lens restoring clear vision.</p>
                                         <iframe class="video_wrapper" height="480" frameborder="0" width="640" allowfullscreen="" src="https://www.youtube.com/embed/ZmnaYg9BWso?rel=0"></iframe>
@@ -291,9 +351,9 @@
                         <div class="col-lg-11">
                             <div class="panel panel-default">
                                 <div class="panel-heading">
-                                    <h4 class="panel-title"><a name="bmcollapseKeratoconus" href=".collapseKeratoconus" xt="SPBOOKMARK" data-parent="#accordion" data-toggle="collapse">Keratoconus</a></h4>
+                                    <h4 class="panel-title"><a name="bmcollapseKeratoconus" href=".collapseKeratoconus" xt="SPBOOKMARK" data-parent="#accordion" data-toggle="collapse">Keratoconus <i class="fa fa-minus"></i></a></h4>
                                 </div>
-                                <div class="panel-collapse collapse collapseKeratoconus">
+                                <div class="panel-collapse collapse in collapseKeratoconus">
                                     <div class="panel-body">
                                         <p>Keratoconus is a condition in which the cornea becomes progressively weak. This leads to irregular shape of the cornea causing blurred vision. In the early phase, the vision can be corrected with either glasses or specialized contact lenses. However, in its advanced stages, surgery is required to restore vision.</p>
                                         <iframe class="video_wrapper" height="315" frameborder="0" width="420" allowfullscreen="" src="https://www.youtube.com/embed/ptO0mrfXy10?rel=0"></iframe>
@@ -308,9 +368,9 @@
                         <div class="col-lg-11">
                             <div class="panel panel-default">
                                 <div class="panel-heading">
-                                    <h4 class="panel-title"><a name="bmcollapseBladed" href=".collapseBladed" xt="SPBOOKMARK" data-parent="#accordion" data-toggle="collapse">Bladed Lasik</a></h4>
+                                    <h4 class="panel-title"><a name="bmcollapseBladed" href=".collapseBladed" xt="SPBOOKMARK" data-parent="#accordion" data-toggle="collapse">Bladed Lasik <i class="fa fa-minus"></i></a></h4>
                                 </div>
-                                <div class="panel-collapse collapse collapseBladed">
+                                <div class="panel-collapse collapse in collapseBladed">
                                     <div class="panel-body">
                                         <p>In bladed LASIK surgery, the corneal flap is created by using a device called Microkeratome. Once the flap is created with a blade, an excimer laser is used to change the curvature of your cornea to correct your vision.</p>
                                         <iframe class="video_wrapper" height="480" frameborder="0" width="640" allowfullscreen="" src="https://www.youtube.com/embed/jCrwmBrHKLg?rel=0"></iframe>
@@ -325,9 +385,9 @@
                         <div class="col-lg-11">
                             <div class="panel panel-default">
                                 <div class="panel-heading">
-                                    <h4 class="panel-title"><a name="bmcollapseLasik" href=".collapseLasik" xt="SPBOOKMARK" data-parent="#accordion" data-toggle="collapse">Bladeless LASIK</a></h4>
+                                    <h4 class="panel-title"><a name="bmcollapseLasik" href=".collapseLasik" xt="SPBOOKMARK" data-parent="#accordion" data-toggle="collapse">Bladeless LASIK <i class="fa fa-minus"></i></a></h4>
                                 </div>
-                                <div class="panel-collapse collapse collapseLasik">
+                                <div class="panel-collapse collapse in collapseLasik">
                                     <div class="panel-body">
                                         <p>In bladeless LASIK, the corneal flap is created using a high precision femtosecond laser.  Once the flap is created, an excimer laser is used to change the curvature of your cornea to correct your vision. Its advantage include higher precision, customizable flap, and greater comfort.</p>
                                         <iframe class="video_wrapper" height="480" frameborder="0" width="640" allowfullscreen="" src="https://www.youtube.com/embed/OvEd4yryBGE?rel=0"></iframe>
@@ -344,9 +404,9 @@
                         <div class="col-lg-11">
                             <div class="panel panel-default">
                                 <div class="panel-heading">
-                                    <h4 class="panel-title"><a name="bmcollapsePRK" href=".collapsePRK" xt="SPBOOKMARK" data-parent="#accordion" data-toggle="collapse">PRK (Photorefractive keratectomy)</a></h4>
+                                    <h4 class="panel-title"><a name="bmcollapsePRK" href=".collapsePRK" xt="SPBOOKMARK" data-parent="#accordion" data-toggle="collapse">PRK (Photorefractive keratectomy) <i class="fa fa-minus"></i></a></h4>
                                 </div>
-                                <div class="panel-collapse collapse collapsePRK">
+                                <div class="panel-collapse collapse in collapsePRK">
                                     <div class="panel-body">
                                         <p>PRK (Photorefractive keratectomy) is a form of laser vision correction where reshaping of the cornea is achieved with an excimer laser without creating a flap. This procedure may be recommended for people with thin corneas.</p>
                                         <iframe class="video_wrapper" height="480" frameborder="0" width="640" allowfullscreen="" src="https://www.youtube.com/embed/uAy2pCQgENg?rel=0"></iframe>
@@ -362,9 +422,9 @@
                         <div class="col-lg-11">
                             <div class="panel panel-default">
                                 <div class="panel-heading">
-                                    <h4 class="panel-title"><a name="bmcollapseICL" href=".collapseICL" xt="SPBOOKMARK" data-parent="#accordion" data-toggle="collapse">ICL</a></h4>
+                                    <h4 class="panel-title"><a name="bmcollapseICL" href=".collapseICL" xt="SPBOOKMARK" data-parent="#accordion" data-toggle="collapse">ICL <i class="fa fa-minus"></i></a></h4>
                                 </div>
-                                <div class="panel-collapse collapse collapseICL">
+                                <div class="panel-collapse collapse in collapseICL">
                                     <div class="panel-body">
                                         <p>Implantable Collamer Lens surgery is a procedure in which vision correction is accomplished by inserting a biocompatible and customized lens inside the eye. This reversible procedure is a great alternative to laser vision correction for patients with high correction or thin corneas.</p>
                                         <iframe class="video_wrapper" height="480" frameborder="0" width="640" allowfullscreen="" src="https://www.youtube.com/embed/NmocfevXTAE?rel=0"></iframe>
@@ -377,7 +437,7 @@
 
                 </div>
 
-                </div>
+            </div>
 
             <hr />
 
@@ -543,8 +603,7 @@
                             <div class="form-group"><input class="form-control" type="text" placeholder="Street" /></div>
                             <div class="form-group"><input class="form-control" type="text" placeholder="City, State, Country and Zipcode" /></div>
                             <div class="form-group">
-                                <textarea class="form-control" type="text" id="map" name="map" placeholder="Google map" style="min-height:60px;"></textarea>
-                                <small>Note: <input type="text" readonly class="token" value="&lt;a href='#'&gt;text&lt;/a&gt;" /></small>
+                                <textarea class="form-control" type="text" id="map" name="map" placeholder="Google map link" style="min-height:40px;"></textarea>
                             </div>
                         </td>
                         <td width="5%"><button class="btn btn-info btn-xs locAdd"><i class="fa fa-plus"></i></button></td>
@@ -890,6 +949,7 @@
 <script src="js/jquery.flexslider-min.js"></script>
 <script src="js/jquery.rowsorter.js"></script>
 <script src="js/jquery.anchor.js"></script>
+<script src="js/jscolor.js"></script>
 <script src="js/custom.js"></script>
 
 <script>

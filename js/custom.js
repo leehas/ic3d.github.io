@@ -73,7 +73,7 @@ $(document).on("click", "button.docAdd, button.tAdd, button.techAdd, button.faqA
         _strHTML += '      <div class="form-group"><input class="form-control" type="tel" placeholder="Contact Number" /></div>';
         _strHTML += '      <div class="form-group"><input class="form-control" type="text" placeholder="Street" /></div>';
         _strHTML += '      <div class="form-group"><input class="form-control" type="text" placeholder="City, State, Country and Zipcode" /></div>';
-        _strHTML += '      <div class="form-group"><textarea class="form-control" type="text" id="map" name="map" placeholder="Google map" style="min-height:60px;"></textarea><small>Note: <input type="text" readonly class="token" value="&lt;a href=\'#\'&gt;text&lt;/a&gt;" /></small></div>';
+        _strHTML += '      <div class="form-group"><textarea class="form-control" type="text" id="map" name="map" placeholder="Google map link" style="min-height:40px;"></textarea></div>';
         _strHTML += '    </td>';
         _strHTML += '    <td><button class="btn btn-info btn-xs locAdd"><i class="fa fa-plus"></i></button> <button class="btn btn-danger btn-xs locRemove"><i class="fa fa-minus"></i></button>';
         _strHTML += '    </td>';
@@ -155,14 +155,19 @@ function fnSetHeaderBackground() {
 }
 
 function fnSetMenuText() {
-    $(".navbar-nav li a:eq(0)").text($("#menu1").val());
-    $(".navbar-nav li a:eq(1)").text($("#menu2").val());
-    $(".navbar-nav li a:eq(2)").text($("#menu3").val());
-    $(".navbar-nav li a:eq(3)").text($("#menu4").val());
-    $(".navbar-nav li a:eq(4)").text($("#menu5").val());
-    $(".navbar-nav li a:eq(5)").text($("#menu6").val());
-    $(".navbar-nav li a:eq(6)").text($("#menu7").val());
-    $(".navbar-nav li a:eq(7)").text($("#menu8").val());
+    $(".cmsMenuItems").find("input[type=checkbox]").each(function (_index, _ele) {
+        $(".navbar-nav li a:eq(" + _index + ")").text($("#" + $(this).attr("aria-label")).val());
+        var _targetSection = $(".navbar-nav li a:eq(" + _index + ")").attr("href");
+        if (!$(_ele).prop("checked")) {
+            $(".navbar-nav li a:eq(" + _index + ")").parent().css("display", "none");
+            $(_targetSection).next().css("display", "none");
+            $(".itop a[href=" + _targetSection + "]").parent().css("display", "none");
+        } else {
+            $(".navbar-nav li a:eq(" + _index + ")").parent().css("display", "inline-block");
+            $(_targetSection).next().css("display", "block");
+            $(".itop a[href=" + _targetSection + "]").parent().css("display", "block");
+        }
+    });
 }
 
 function fnSetTour() {
@@ -261,102 +266,126 @@ function fnOurDoctor() {
             var _strHTML = '';
             _strHTML += '<div>' + $("#callUsDesc").val() + '</div>';
             _strHTML += '<h3>' + $(_ele).find("input[type='text']:eq(0)").val() + '</h3>';
-            _strHTML += '<p>' + $(_ele).find("input[type='tel']:eq(0)").val() + '<br /> ' + $(_ele).find("input[type='text']:eq(1)").val() + '<br />' + $(_ele).find("input[type='text']:eq(2)").val() + '</p>';
-            _strHTML += $(_ele).find("textarea").val();
-
+            _strHTML += '<p>' + $(_ele).find("input[type='tel']:eq(0)").val() + '<br /> ' + $(_ele).find("input[type='text']:eq(1)").val() + '<br />' + $(_ele).find("input[type='text']:eq(2)").val() + '<br /><a href="' + ($(_ele).find("textarea").val().length > 0) ? $(_ele).find("textarea").val() : '#' + '" target="_blank">Show map</a></p>';
+            
             $("#ctaContent").append(_strHTML);
         });
 
     }
 
-    $(document).on("click", "button.submit-preview", function () {
-        $(".preLoad-wrap").fadeIn();
+    function fnSetMenuColor() {
+        var _menuBgColor = $("#menuBgColor").val();
+        var _menuActiveColor = $("#menuActiveColor").val();
+        var _menuTextColor = $("#menuTextColor").val();
+        $("#menuStyle1").remove();
+        $("<style id='menuStyle1'>.navbar{ background-color: #" + _menuBgColor + "!important; } .navbar .nav > li > a:hover{ background-color: #" + _menuActiveColor + "!important; color: #" + _menuTextColor + "!important; } .navbar .nav .active > a, .navbar .nav .active > a:hover, .navbar .nav .active > a:focus, .nav a.active{ background-color: #" + _menuActiveColor + "!important; color: #" + _menuTextColor + "!important;  } </style>").appendTo("head")
+    }
 
-        /*Call functions*/
-        fnSetMenuText();
-        fnSetHeaderBackground();
-        fnSetTour();
-        fnSetConsultationFeatures();
-        fnOurDoctor();
-        fnGenerateTestimonials();
-        fnFinancing();
-        fnTechnology();
-        fnFaq();
-        fnCta();
 
-        $("#cmsBuilder").fadeOut('fast', function () {
-            $(".navbar-nav li.active").removeClass("active");
-            $('html, body').stop().animate({
-                'scrollTop': 0
-            }, 900, 'swing', function () {
 
-                $(".navbar").fadeIn('slow', function () {
-                    $("#page-wrapper").fadeIn();
-                    $(".preLoad-wrap").fadeOut();
+        $(document).on("click", "button.submit-preview", function () {
+            $(".preLoad-wrap").fadeIn();
+
+            /*Call functions*/
+            fnSetMenuColor();
+            fnSetMenuText();
+            fnSetHeaderBackground();
+            fnSetTour();
+            fnSetConsultationFeatures();
+            fnOurDoctor();
+            fnGenerateTestimonials();
+            fnFinancing();
+            fnTechnology();
+            fnFaq();
+            fnCta();
+
+            $("#cmsBuilder").fadeOut('fast', function () {
+                $(".navbar-nav li.active").removeClass("active");
+                $('html, body').stop().animate({
+                    'scrollTop': 0
+                }, 900, 'swing', function () {
+
+                    $(".navbar").fadeIn('slow', function () {
+                        $("#page-wrapper").fadeIn();
+                        $(".preLoad-wrap").fadeOut();
+
+                    });
 
                 });
 
             });
-
-        });
-        return false;
-    });
-
-    $(document).on("click", "#editBack a", function () {
-        $(".preLoad-wrap").fadeIn();
-        $(".navbar").fadeOut('fast');
-        $("#page-wrapper").fadeOut('fast', function () {
-            $(".navbar-nav li.active").removeClass("active");
-            $('html, body').stop().animate({
-                'scrollTop': 0
-            }, 900, 'swing', function () {
-
-                $("#cmsBuilder").fadeIn('slow', function () {
-                    $(".preLoad-wrap").fadeOut();
-                });
-
-            });
-
-        });
-
-        return false;
-    });
-
-
-    $('span[contenteditable]').keydown(function (e) {
-        if (e.keyCode == 13) {
             return false;
-        }
-    });
+        });
 
-    $('span[contenteditable]').keyup(function (e) {
-        switch( $(this).attr("class") ){
-            case 'head1':
-                $(".bor-top:eq(0)").next().text($(this).text())
-                break;
-            case 'head2':
-                $(".bor-top:eq(1)").next().text($(this).text())
-                break;
-            case 'head3':
-                $(".bor-top:eq(2)").next().text($(this).text())
-                break;
-            case 'head4':
-                $(".bor-top:eq(3)").next().text($(this).text())
-                break;
-            case 'head5':
-                $(".bor-top:eq(4)").next().text($(this).text())
-                break;
-            case 'head6':
-                $(".bor-top:eq(5)").next().text($(this).text())
-                break;
-            case 'head7':
-                $(".bor-top:eq(6)").next().text($(this).text())
-                break;
-            case 'head8':
-                $(".bor-top:eq(7)").next().text($(this).text())
-                break;
-            case 'head9':
-                $(".bor-top:eq(8)").next().text($(this).text())
-                break;
-        }
-    });
+        $(document).on("click", "#editBack a", function () {
+            $(".preLoad-wrap").fadeIn();
+            $(".navbar").fadeOut('fast');
+            $("#page-wrapper").fadeOut('fast', function () {
+                $(".navbar-nav li.active").removeClass("active");
+                $('html, body').stop().animate({
+                    'scrollTop': 0
+                }, 900, 'swing', function () {
+
+                    $("#cmsBuilder").fadeIn('slow', function () {
+                        $(".preLoad-wrap").fadeOut();
+                    });
+
+                });
+
+            });
+
+            return false;
+        });
+
+
+        $('span[contenteditable]').keydown(function (e) {
+            if (e.keyCode == 13) {
+                return false;
+            }
+        });
+
+        $('span[contenteditable]').keyup(function (e) {
+            switch( $(this).attr("class") ){
+                case 'head1':
+                    $(".bor-top:eq(0)").next().text($(this).text())
+                    break;
+                case 'head2':
+                    $(".bor-top:eq(1)").next().text($(this).text())
+                    break;
+                case 'head3':
+                    $(".bor-top:eq(2)").next().text($(this).text())
+                    break;
+                case 'head4':
+                    $(".bor-top:eq(3)").next().text($(this).text())
+                    break;
+                case 'head5':
+                    $(".bor-top:eq(4)").next().text($(this).text())
+                    break;
+                case 'head6':
+                    $(".bor-top:eq(5)").next().text($(this).text())
+                    break;
+                case 'head7':
+                    $(".bor-top:eq(6)").next().text($(this).text())
+                    break;
+                case 'head8':
+                    $(".bor-top:eq(7)").next().text($(this).text())
+                    break;
+                case 'head9':
+                    $(".bor-top:eq(8)").next().text($(this).text())
+                    break;
+            }
+        });
+
+        $(document).on("click", ".panel-title a", function () {
+            var _obj = $(this);
+            setTimeout(function () {
+                if ($($(_obj).attr("href")).hasClass("in")) {
+                    $(_obj).find("i").removeClass("fa-plus").addClass("fa-minus"); 
+                } else {
+                    $(_obj).find("i").removeClass("fa-minus").addClass("fa-plus");
+                }
+            }, 400);
+        });
+
+
+    
