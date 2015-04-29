@@ -128,7 +128,7 @@ div.optometrists
 var monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 
 
-$(document).on("keyup change", "#firstname, #lastname, #optindate, #shortConsultOverview, #optometristsContent", function () {
+$(document).on("keyup change", "#firstname, #lastname, #optindate, #optometristsContent", function () {
     switch (this.id) {
         case 'firstname':
             $(".ic_FirstName").text($(this).val());
@@ -141,19 +141,13 @@ $(document).on("keyup change", "#firstname, #lastname, #optindate, #shortConsult
             var d = new Date(val);
             $(".ic_OptInDate").text(monthNames[d.getMonth()] + ' ' + d.getDate() + ', ' + d.getFullYear());
             break;
-        case 'shortConsultOverview':
-            if ($("#chkShortConsultOverview").prop("checked")) {
-                $("#ic_shortOverview").show();
-                $(".ic_shortOverview").html($(this).val());
-            } else {
-                $("#ic_shortOverview").hide();
-            }
-            break;
         case 'optometristsContent':
             $("div.optometrists").html($(this).val() + "<p>&nbsp;</p>");
             break;
     }
 });
+
+
 
 function fnSetHeaderBackground() {
         if ($("#chkBgImage").prop("checked")) {
@@ -177,6 +171,15 @@ function fnSetMenuText() {
             $(".itop a[href=" + _targetSection + "]").parent().css("display", "block");
         }
     });
+}
+
+function fnSetShortDescription() {
+    if ($("#chkShortConsultOverview").prop("checked")) {
+        $("#ic_shortOverview").show();
+        $(".ic_shortOverview").html($("#shortConsultOverview").val());
+    } else {
+        $("#ic_shortOverview").hide();
+    }
 }
 
 function fnSetTour() {
@@ -279,7 +282,7 @@ function fnOurDoctor() {
 
         var _bookHTML = "";
         if ($("#chkBookConsultation").prop("checked")) {
-            _bookHTML = "<p><a href='" + $("#bookConsultation").val() + "' target='_blank' class='btn btn-lg' style='background-color:#" + $("#menuBgColor").val() + "!important; color:#" + $("#menuTextColor").val() + "!important' onmouseenter=\"$(this).css('background-color', '#" + $("#menuBgColor").val() + "')\" onmouseout=\"$(this).css('background-color', '#" + $("#menuActiveColor").val() + "')\" >Book Consultation</a></p>";
+            _bookHTML = "<p><a href='" + $("#bookConsultation").val() + "' target='_blank' class='btn btn-lg' style='background-color:#" + $("#menuBgColor").val() + "!important; color:#" + $("#menuTextColor").val() + "!important' onmouseout=\"$(this).css('background-color', '#" + $("#menuBgColor").val() + "')\" onmouseenter=\"$(this).css('background-color', '#" + $("#menuActiveColor").val() + "')\" >Book Consultation</a></p>";
             $("#ctaContent").append(_bookHTML);
         }
 
@@ -324,6 +327,7 @@ function fnOurDoctor() {
             fnSetMenuColor();
             fnSetMenuText();
             fnSetHeaderBackground();
+            fnSetShortDescription();
             fnSetTour();
             fnSetConsultationFeatures();
             fnOurDoctor();
