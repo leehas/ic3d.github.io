@@ -180,8 +180,12 @@
                     </div>
 
                     <div class="form-group">
-                        <textarea class="form-control" id="shortConsultOverview" name="shortConsultOverview" placeholder="Short Consultation Overview"></textarea>
-                        <small>Note: <input type="text" readonly class="token" value="&lt;br /&gt;" />, <input type="text" readonly class="token" value="&lt;p&gt;&lt;/p&gt;" />, <input type="text" readonly class="token" value="&lt;b&gt;&lt;/b&gt;" />, <input type="text" readonly class="token" value="&lt;a href='#'&gt;text&lt;/a&gt;" />, <input type="text" readonly class="token" value="&lt;ul&gt;&lt;li&gt;&lt;/li&gt;&lt;/ul&gt;" />, <input type="text" readonly class="token" value="&lt;ol&gt;&lt;li&gt;&lt;/li&gt;&lt;/ol&gt;" /></small>
+                        <label><input type="checkbox" id="chkShortConsultOverview" /> Consult Overview</label> 
+                        <div id="scv" style="display:none;">
+                            <textarea class="form-control" id="shortConsultOverview" name="shortConsultOverview" placeholder="Short Consultation Overview"></textarea>
+                            <small>Note: <input type="text" readonly class="token" value="&lt;br /&gt;" />, <input type="text" readonly class="token" value="&lt;p&gt;&lt;/p&gt;" />, <input type="text" readonly class="token" value="&lt;b&gt;&lt;/b&gt;" />, <input type="text" readonly class="token" value="&lt;a href='#'&gt;text&lt;/a&gt;" />, <input type="text" readonly class="token" value="&lt;ul&gt;&lt;li&gt;&lt;/li&gt;&lt;/ul&gt;" />, <input type="text" readonly class="token" value="&lt;ol&gt;&lt;li&gt;&lt;/li&gt;&lt;/ol&gt;" /></small>
+                        </div>
+                       
                     </div>
 
                 </div>
@@ -192,6 +196,14 @@
                         <input type="file" class="hide">
                         <div class="clearfix"></div>
                         <small>Best Resolution, w:2910px h:1689px</small>
+
+                        <div class="input-group">
+                            <span class="input-group-addon">
+                                <input type="checkbox" aria-label="bg-image" id="chkBgImage">
+                            </span>
+                            <input class="form-control" type="text" id="bg-image" name="bg-image" placeholder="Image URL" disabled />
+                        </div>
+
                     </div>
 
                 </div>
@@ -593,23 +605,32 @@
                         <textarea class="form-control" id="callUsDesc" name="callUsDesc" placeholder="Call to us"></textarea>
                     </div>
                 </div>
-
+                <div class="col-lg-12">
+                    <div class="form-group">
+                        <div class="input-group">
+                            <span class="input-group-addon">
+                                <input type="checkbox" aria-label="bookConsultation" id="chkBookConsultation"> Book Consultation
+                            </span>
+                            <input class="form-control" type="text" id="bookConsultation" name="bookConsultation" placeholder="enter url" disabled />
+                        </div>
+                    </div>
+                </div>
                 <table class="table table-striped table-hover sorted_table" id="tabLocation">
-                    <tr>
-                        <td width="5%" class="sorter"><i class="fa fa-arrows"></i></td>
-                        <td width="90%">
-                            <div class="form-group"><input class="form-control" type="text" placeholder="Office name" /></div>
-                            <div class="form-group"><input class="form-control" type="tel" placeholder="Contact Number" /></div>
-                            <div class="form-group"><input class="form-control" type="text" placeholder="Street" /></div>
-                            <div class="form-group"><input class="form-control" type="text" placeholder="City, State, Country and Zipcode" /></div>
-                            <div class="form-group">
-                                <textarea class="form-control" type="text" id="map" name="map" placeholder="Google map link" style="min-height:40px;"></textarea>
-                            </div>
-                        </td>
-                        <td width="5%"><button class="btn btn-info btn-xs locAdd"><i class="fa fa-plus"></i></button></td>
-                    </tr>
-                </table>
-            </div>
+                        <tr>
+                            <td width="5%" class="sorter"><i class="fa fa-arrows"></i></td>
+                            <td width="90%">
+                                <div class="form-group"><input class="form-control" type="text" placeholder="Office name" /></div>
+                                <div class="form-group"><input class="form-control" type="tel" placeholder="Contact Number" /></div>
+                                <div class="form-group"><input class="form-control" type="text" placeholder="Street" /></div>
+                                <div class="form-group"><input class="form-control" type="text" placeholder="City, State, Country and Zipcode" /></div>
+                                <div class="form-group">
+                                    <textarea class="form-control" type="text" id="map" name="map" placeholder="Google map link" style="min-height:40px;"></textarea>
+                                </div>
+                            </td>
+                            <td width="5%"><button class="btn btn-info btn-xs locAdd"><i class="fa fa-plus"></i></button></td>
+                        </tr>
+                    </table>
+                </div>
 
 
             <div class="row">
@@ -672,7 +693,7 @@
                                 <br />Consultation Overview
                                 <br /><db class="ic_OptInDate">%%Opt In Date%%</db>
                             </h2>
-                            <div class="well">
+                            <div id="ic_shortOverview" class="well" style="display:none;">
                                 <h2>Hi <db class="ic_FirstName">%%First_Name%%</db>,</h2>
                                 <div class="ic_shortOverview">
                                     <!-- replace with content -->
@@ -900,8 +921,9 @@
                         </div>
                     </div>
                     <div class="col-md-12">
-                        <div id="ctaContent" class="well text-center">
+                        <div class="well text-center">
                             <!-- replace with content -->
+                            <div id="ctaContent"></div>
                         </div>
                     </div>
                 </div>

@@ -139,10 +139,15 @@ $(document).on("keyup change", "#firstname, #lastname, #optindate, #shortConsult
         case 'optindate':
             var val = $(this).val();
             var d = new Date(val);
-            $(".ic_OptInDate").text(monthNames[d.getMonth()] + ' ' + d.getDate() + ' ' + d.getFullYear());
+            $(".ic_OptInDate").text(monthNames[d.getMonth()] + ' ' + d.getDate() + ', ' + d.getFullYear());
             break;
         case 'shortConsultOverview':
-            $(".ic_shortOverview").html($(this).val());
+            if ($("#chkShortConsultOverview").prop("checked")) {
+                $("#ic_shortOverview").show();
+                $(".ic_shortOverview").html($(this).val());
+            } else {
+                $("#ic_shortOverview").hide();
+            }
             break;
         case 'optometristsContent':
             $("div.optometrists").html($(this).val() + "<p>&nbsp;</p>");
@@ -151,7 +156,11 @@ $(document).on("keyup change", "#firstname, #lastname, #optindate, #shortConsult
 });
 
 function fnSetHeaderBackground() {
-    $("header").attr("style", "background-image: url('" + $(".header-img").attr("src") + "');");
+        if ($("#chkBgImage").prop("checked")) {
+            $("header").attr("style", "background-image: url('" + $("#bg-image").val() + "');");
+        } else {
+            $("header").attr("style", "background-image: url('" + $(".header-img").attr("src") + "');");
+        }
 }
 
 function fnSetMenuText() {
@@ -210,8 +219,13 @@ function fnOurDoctor() {
             _strHTML +=    '    <div class="bubble_wrapper">';
             _strHTML +=    '    <div class="bubble blue_bubble">';
             _strHTML += '        <i class="fa fa-quote-left"></i> '+ $(_ele).find("textarea").val() +'<i class="fa fa-quote-right"></i>';
-            _strHTML +=    '    </div>';
-            _strHTML += '    <h4>~' + $(_ele).find("input[type='text']").val() + ' (' + $(_ele).find("input[type='date']").val() + ')</h4>';
+            _strHTML += '    </div>';
+
+            var val = $(_ele).find("input[type='date']").val();
+            var d = new Date(val);
+            var _date = monthNames[d.getMonth()] + ' ' + d.getDate() + ', ' + d.getFullYear();
+
+            _strHTML += '    <h4>~' + $(_ele).find("input[type='text']").val() + ' (' + _date + ')</h4>';
             _strHTML +=    '    </div>';
             _strHTML +=    '</div>';
 
@@ -262,11 +276,31 @@ function fnOurDoctor() {
 
     function fnCta() {
         $("#ctaContent").html("");
+
+        var _bookHTML = "";
+        if ($("#chkBookConsultation").prop("checked")) {
+            _bookHTML = "<p><a href='" + $("#bookConsultation").val() + "' target='_blank' class='btn btn-lg' style='background-color:#" + $("#menuBgColor").val() + "!important; color:#" + $("#menuTextColor").val() + "!important' onmouseenter=\"$(this).css('background-color', '#" + $("#menuBgColor").val() + "')\" onmouseout=\"$(this).css('background-color', '#" + $("#menuActiveColor").val() + "')\" >Book Consultation</a></p>";
+            $("#ctaContent").append(_bookHTML);
+        }
+
         $("#tabLocation tr").each(function (_index, _ele) {
             var _strHTML = '';
-            _strHTML += '<div>' + $("#callUsDesc").val() + '</div>';
-            _strHTML += '<h3>' + $(_ele).find("input[type='text']:eq(0)").val() + '</h3>';
-            _strHTML += '<p>' + $(_ele).find("input[type='tel']:eq(0)").val() + '<br /> ' + $(_ele).find("input[type='text']:eq(1)").val() + '<br />' + $(_ele).find("input[type='text']:eq(2)").val() + '<br /><a href="' + ($(_ele).find("textarea").val().length > 0) ? $(_ele).find("textarea").val() : '#' + '" target="_blank">Show map</a></p>';
+            _strHTML += "<div>" + $("#callUsDesc").val() + "</div>";
+            _strHTML += "<h3>" + $(_ele).find("input[type='text']:eq(0)").val() + "</h3>";
+            
+            _strHTML += "<p>" + $(_ele).find("input[type='tel']:eq(0)").val() + "<br /> " + $(_ele).find("input[type='text']:eq(1)").val() + '<br />' + $(_ele).find("input[type='text']:eq(2)").val() + '</p>';
+            var _map = $(_ele).find("textarea").val().trim();
+            if( _map.length > 0  ){
+                if( _map.lastIndexOf("<iframe") != -1 ){
+                    _mapSrc = _map.substring(_map.lastIndexOf("src=\"") + 5);
+                    _mapSrc = _mapSrc.substring(0, _mapSrc.indexOf("\""));
+                    _strHTML += "<br /> <iframe src=\"" + _mapSrc + " \" class=\"googlemap\" style=\"width:100%; height:300px; border:none;\" frameborder=\"0\"></iframe>";
+                }
+                else{
+                    _strHTML += '<br /><a href="' + _map + '" target="_blank" title="Show map">Show map</a>';
+                }
+            }
+            
             
             $("#ctaContent").append(_strHTML);
         });
@@ -311,6 +345,12 @@ function fnOurDoctor() {
 
                     });
 
+                    setTimeout(function () {
+                        $(".googlemap").each(function (_index, _ele) {
+                            $(_ele).attr("src", $(_ele).attr("src"));
+                        });
+                    }, 800);
+                    
                 });
 
             });
@@ -387,5 +427,26 @@ function fnOurDoctor() {
             }, 400);
         });
 
+        $("#chkBookConsultation").change(function () {
+            if ($(this).prop("checked")) {
+                $("#bookConsultation").removeAttr("disabled");
+            } else {
+                $("#bookConsultation").attr("disabled", "disabled").val("");
+            }
+        });
 
-    
+        $("#chkShortConsultOverview").change(function () {
+            if ($(this).prop("checked")) {
+                $("#scv").show();
+            } else {
+                $("#scv").hide();
+            }
+        });
+
+        $("#chkBgImage").change(function () {
+            if ($(this).prop("checked")) {
+                $("#bg-image").removeAttr("disabled");
+            } else {
+                $("#bg-image").attr("disabled", "disabled").val("");
+            }
+        });
