@@ -476,7 +476,7 @@ function fnOurDoctor() {
             }
         });
 
-        $(document).on("paste", ".img-url input[type='text']", function (e) {
+        $(document).on("paste keyup", ".img-url input[type='text']", function (e) {
             setTimeout(function () {
                 $(e.currentTarget).parent().parent().find("img").attr("src", $(e.currentTarget).val());
             }, 10);
