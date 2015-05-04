@@ -51,3 +51,9 @@ table tr td textarea {
 cursor: pointer;
 }
 
+.nav-tabs li.active a {
+  background-color: #66ABE4!important;
+  color: #fff!important;
+
+}
+

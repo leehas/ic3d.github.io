@@ -192,14 +192,14 @@
 
                 <div class="col-lg-3">
                     <div class="form-group">
-                        <img src="http://placehold.it/180x220&amp;text=Background" class="img-thumbnail img-responsive header-img change-img" title="Click on picture to change">
+                        <img src="http://placehold.it/180x180&amp;text=Background" class="img-thumbnail img-responsive header-img change-img" title="Click on picture to change">
                         <input type="file" class="hide">
                         <div class="clearfix"></div>
                         <small>Best Resolution, w:2910px h:1689px</small>
 
-                        <div class="input-group">
+                        <div class="input-group img-url">
                             <span class="input-group-addon">
-                                <input type="checkbox" aria-label="bg-image" id="chkBgImage">
+                                <input type="checkbox" aria-label="bg-image">
                             </span>
                             <input class="form-control" type="text" id="bg-image" name="bg-image" placeholder="Image URL" disabled />
                         </div>
@@ -237,8 +237,14 @@
                         </div>
                         <div role="tabpanel" class="tab-pane" id="imageSurgery">
                             <div class="form-group">
-                                <img src="http://placehold.it/180x220&amp;text=image" class="img-thumbnail img-responsive surgery-img change-img" title="Click on picture to change">
+                                <img src="http://placehold.it/180x180&amp;text=image" class="img-thumbnail img-responsive surgery-img change-img" title="Click on picture to change">
                                 <input type="file" class="hide">
+                                <div class="input-group img-url">
+                                    <span class="input-group-addon">
+                                        <input type="checkbox" aria-label="tour-img">
+                                    </span>
+                                    <input class="form-control" type="text" id="tour-img" name="tour-img" placeholder="Image URL" disabled="disabled">
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -261,7 +267,7 @@
                         <div class="col-lg-11">
                             <div class="panel panel-default">
                                 <div class="panel-heading">
-                                    <h4 class="panel-title"><a name="bmcollapse2020Vision" href=".collapse2020Vision" xt="SPBOOKMARK" data-parent="#accordion" data-toggle="collapse">20/20 Vision <i class="fa fa-plus"></i></a></h4>
+                                    <h4 class="panel-title"><a name="bmcollapse2020Vision" href=".collapse2020Vision" xt="SPBOOKMARK" data-parent="#accordion" data-toggle="collapse" class="collapsed">20/20 Vision <i class="fa fa-plus"></i></a></h4>
                                 </div>
                                 <div class="panel-collapse collapse collapse2020Vision">
                                     <div class="panel-body">
@@ -278,7 +284,7 @@
                         <div class="col-lg-11">
                             <div class="panel panel-default">
                                 <div class="panel-heading">
-                                    <h4 class="panel-title"><a name="bmcollapseMyopia" href=".collapseMyopia" xt="SPBOOKMARK" data-parent="#accordion" data-toggle="collapse">Myopia (Nearsightedness) <i class="fa fa-plus"></i></a></h4>
+                                    <h4 class="panel-title"><a name="bmcollapseMyopia" href=".collapseMyopia" xt="SPBOOKMARK" data-parent="#accordion" data-toggle="collapse" class="collapsed">Myopia (Nearsightedness) <i class="fa fa-plus"></i></a></h4>
                                 </div>
                                 <div class="panel-collapse collapse collapseMyopia">
                                     <div class="panel-body">
@@ -295,7 +301,7 @@
                         <div class="col-lg-11">
                             <div class="panel panel-default">
                                 <div class="panel-heading">
-                                    <h4 class="panel-title"><a name="bmcollapseAstigmatism" href=".collapseAstigmatism" xt="SPBOOKMARK" data-parent="#accordion" data-toggle="collapse">Astigmatism <i class="fa fa-plus"></i></a></h4>
+                                    <h4 class="panel-title"><a name="bmcollapseAstigmatism" href=".collapseAstigmatism" xt="SPBOOKMARK" data-parent="#accordion" data-toggle="collapse" class="collapsed">Astigmatism <i class="fa fa-plus"></i></a></h4>
                                 </div>
                                 <div class="panel-collapse collapse collapseAstigmatism">
                                     <div class="panel-body">
@@ -312,7 +318,7 @@
                         <div class="col-lg-11">
                             <div class="panel panel-default">
                                 <div class="panel-heading">
-                                    <h4 class="panel-title"><a name="bmcollapseHyperopia" href=".collapseHyperopia" xt="SPBOOKMARK" data-parent="#accordion" data-toggle="collapse">Hyperopia (Farsightedness) <i class="fa fa-plus"></i></a></h4>
+                                    <h4 class="panel-title"><a name="bmcollapseHyperopia" href=".collapseHyperopia" xt="SPBOOKMARK" data-parent="#accordion" data-toggle="collapse" class="collapsed">Hyperopia (Farsightedness) <i class="fa fa-plus"></i></a></h4>
                                 </div>
                                 <div class="panel-collapse collapse collapseHyperopia">
                                     <div class="panel-body">
@@ -329,7 +335,7 @@
                         <div class="col-lg-11">
                             <div class="panel panel-default">
                                 <div class="panel-heading">
-                                    <h4 class="panel-title"><a name="bmcollapsePresbyopia" href=".collapsePresbyopia" xt="SPBOOKMARK" data-parent="#accordion" data-toggle="collapse">Presbyopia <i class="fa fa-plus"></i></a></h4>
+                                    <h4 class="panel-title"><a name="bmcollapsePresbyopia" href=".collapsePresbyopia" xt="SPBOOKMARK" data-parent="#accordion" data-toggle="collapse" class="collapsed">Presbyopia <i class="fa fa-plus"></i></a></h4>
                                 </div>
                                 <div class="panel-collapse collapse collapsePresbyopia">
                                     <div class="panel-body">
@@ -346,7 +352,7 @@
                         <div class="col-lg-11">
                             <div class="panel panel-default">
                                 <div class="panel-heading">
-                                    <h4 class="panel-title"><a name="bmcollapseCataracts" href=".collapseCataracts" xt="SPBOOKMARK" data-parent="#accordion" data-toggle="collapse">Cataracts <i class="fa fa-plus"></i></a></h4>
+                                    <h4 class="panel-title"><a name="bmcollapseCataracts" href=".collapseCataracts" xt="SPBOOKMARK" data-parent="#accordion" data-toggle="collapse" class="collapsed">Cataracts <i class="fa fa-plus"></i></a></h4>
                                 </div>
                                 <div class="panel-collapse collapse collapseCataracts">
                                     <div class="panel-body">
@@ -363,7 +369,7 @@
                         <div class="col-lg-11">
                             <div class="panel panel-default">
                                 <div class="panel-heading">
-                                    <h4 class="panel-title"><a name="bmcollapseKeratoconus" href=".collapseKeratoconus" xt="SPBOOKMARK" data-parent="#accordion" data-toggle="collapse">Keratoconus <i class="fa fa-plus"></i></a></h4>
+                                    <h4 class="panel-title"><a name="bmcollapseKeratoconus" href=".collapseKeratoconus" xt="SPBOOKMARK" data-parent="#accordion" data-toggle="collapse" class="collapsed">Keratoconus <i class="fa fa-plus"></i></a></h4>
                                 </div>
                                 <div class="panel-collapse collapse collapseKeratoconus">
                                     <div class="panel-body">
@@ -380,7 +386,7 @@
                         <div class="col-lg-11">
                             <div class="panel panel-default">
                                 <div class="panel-heading">
-                                    <h4 class="panel-title"><a name="bmcollapseBladed" href=".collapseBladed" xt="SPBOOKMARK" data-parent="#accordion" data-toggle="collapse">Bladed Lasik <i class="fa fa-plus"></i></a></h4>
+                                    <h4 class="panel-title"><a name="bmcollapseBladed" href=".collapseBladed" xt="SPBOOKMARK" data-parent="#accordion" data-toggle="collapse" class="collapsed">Bladed Lasik <i class="fa fa-plus"></i></a></h4>
                                 </div>
                                 <div class="panel-collapse collapse collapseBladed">
                                     <div class="panel-body">
@@ -397,7 +403,7 @@
                         <div class="col-lg-11">
                             <div class="panel panel-default">
                                 <div class="panel-heading">
-                                    <h4 class="panel-title"><a name="bmcollapseLasik" href=".collapseLasik" xt="SPBOOKMARK" data-parent="#accordion" data-toggle="collapse">Bladeless LASIK <i class="fa fa-plus"></i></a></h4>
+                                    <h4 class="panel-title"><a name="bmcollapseLasik" href=".collapseLasik" xt="SPBOOKMARK" data-parent="#accordion" data-toggle="collapse" class="collapsed">Bladeless LASIK <i class="fa fa-plus"></i></a></h4>
                                 </div>
                                 <div class="panel-collapse collapse collapseLasik">
                                     <div class="panel-body">
@@ -416,7 +422,7 @@
                         <div class="col-lg-11">
                             <div class="panel panel-default">
                                 <div class="panel-heading">
-                                    <h4 class="panel-title"><a name="bmcollapsePRK" href=".collapsePRK" xt="SPBOOKMARK" data-parent="#accordion" data-toggle="collapse">PRK (Photorefractive keratectomy) <i class="fa fa-plus"></i></a></h4>
+                                    <h4 class="panel-title"><a name="bmcollapsePRK" href=".collapsePRK" xt="SPBOOKMARK" data-parent="#accordion" data-toggle="collapse" class="collapsed">PRK (Photorefractive keratectomy) <i class="fa fa-plus"></i></a></h4>
                                 </div>
                                 <div class="panel-collapse collapse collapsePRK">
                                     <div class="panel-body">
@@ -434,7 +440,7 @@
                         <div class="col-lg-11">
                             <div class="panel panel-default">
                                 <div class="panel-heading">
-                                    <h4 class="panel-title"><a name="bmcollapseICL" href=".collapseICL" xt="SPBOOKMARK" data-parent="#accordion" data-toggle="collapse">ICL <i class="fa fa-plus"></i></a></h4>
+                                    <h4 class="panel-title"><a name="bmcollapseICL" href=".collapseICL" xt="SPBOOKMARK" data-parent="#accordion" data-toggle="collapse" class="collapsed">ICL <i class="fa fa-plus"></i></a></h4>
                                 </div>
                                 <div class="panel-collapse collapse collapseICL">
                                     <div class="panel-body">
@@ -466,8 +472,14 @@
                             <small>Note: <input type="text" readonly class="token" value="&lt;br /&gt;" />, <input type="text" readonly class="token" value="&lt;p&gt;&lt;/p&gt;" />, <input type="text" readonly class="token" value="&lt;b&gt;&lt;/b&gt;" />, <input type="text" readonly class="token" value="&lt;a href='#'&gt;text&lt;/a&gt;" />, <input type="text" readonly class="token" value="&lt;ul&gt;&lt;li&gt;&lt;/li&gt;&lt;/ul&gt;" />, <input type="text" readonly class="token" value="&lt;ol&gt;&lt;li&gt;&lt;/li&gt;&lt;/ol&gt;" /></small>
                         </td>
                         <td width="20%">
-                            <img src="http://placehold.it/140x120&text=Picture" class="img-thumbnail doctor-img change-img" title="Click on picture to change">
+                            <img src="http://placehold.it/180x180&text=Picture" class="img-thumbnail doctor-img change-img" title="Click on picture to change">
                             <input type="file" class="hide" />
+                            <div class="input-group img-url">
+                                <span class="input-group-addon">
+                                    <input type="checkbox" aria-label="doctor-img-url">
+                                </span>
+                                <input class="form-control" type="text" name="doctor-img-url" placeholder="Image URL" disabled />
+                            </div>
                         </td>
                         <td width="5%">
                             <button class="btn btn-info btn-xs docAdd"><i class="fa fa-plus"></i></button>
@@ -552,8 +564,14 @@
                                 <input type="text" class="form-control" placeholder="Name" />
                             </td>
                             <td width="30%">
-                                <img src="http://placehold.it/80x80&amp;text=Picture" class="img-thumbnail change-img" title="Click on picture to change">
+                                <img src="http://placehold.it/180x180&amp;text=Picture" class="img-thumbnail change-img" title="Click on picture to change">
                                 <input type="file" class="hide">
+                                <div class="input-group img-url">
+                                    <span class="input-group-addon">
+                                        <input type="checkbox" aria-label="tech-img-url">
+                                    </span>
+                                    <input class="form-control" type="text" name="tech-img-url" placeholder="Image URL" disabled />
+                                </div>
                             </td>
                             <td width="10%">
                                 <button class="btn btn-info btn-xs techAdd"><i class="fa fa-plus"></i></button>

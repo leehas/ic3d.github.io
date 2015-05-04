@@ -33,7 +33,7 @@ $(document).on("click", "button.docAdd, button.tAdd, button.techAdd, button.faqA
 
     if ($(this).hasClass("docAdd")) {
         var _strHTML = '<tr><td class="sorter"><i class="fa fa-arrows"></i></td><td><textarea class="form-control" style="min-height: 128px;" placeholder="Content"></textarea><small>Note: <input type="text" readonly class="token" value="&lt;br /&gt;" />, <input type="text" readonly class="token" value="&lt;p&gt;&lt;/p&gt;" />, <input type="text" readonly class="token" value="&lt;b&gt;&lt;/b&gt;" />, <input type="text" readonly class="token" value="&lt;a href=\'#\'&gt;text&lt;/a&gt;" />, <input type="text" readonly class="token" value="&lt;ul&gt;&lt;li&gt;&lt;/li&gt;&lt;/ul&gt;" />, <input type="text" readonly class="token" value="&lt;ol&gt;&lt;li&gt;&lt;/li&gt;&lt;/ol&gt;" /></small></td>';
-        _strHTML += '    <td><img src="http://placehold.it/140x120&text=Picture" class="img-thumbnail doctor-img change-img" title="Click on picture to change"><input type="file" class="hide"></td>';
+        _strHTML += '    <td><img src="http://placehold.it/180x180&text=Picture" class="img-thumbnail doctor-img change-img" title="Click on picture to change"><input type="file" class="hide"><div class="input-group img-url"><span class="input-group-addon"><input type="checkbox" aria-label="doctor-img-url"></span><input class="form-control"  type="text" name="doctor-img-url" placeholder="Image URL" disabled /></div></td>';
         _strHTML += '    <td><button class="btn btn-info btn-xs docAdd"><i class="fa fa-plus"></i></button> <button class="btn btn-danger btn-xs docRemove"><i class="fa fa-minus"></i></button></td>';
         _strHTML += '</tr>';
         $("#tabDoctor").append(_strHTML);
@@ -51,7 +51,7 @@ $(document).on("click", "button.docAdd, button.tAdd, button.techAdd, button.faqA
 
     if ($(this).hasClass("techAdd")) {
         var _strHTML = '<tr><td class="sorter"><i class="fa fa-arrows"></i></td><td width="60%"><input type="text" class="form-control" placeholder="Name" /></td>';
-        _strHTML += '    <td width="30%"><img src="http://placehold.it/80x80&amp;text=Picture" class="img-thumbnail change-img" title="Click on picture to change"><input type="file" class="techImg hide"></td>';
+        _strHTML += '    <td width="30%"><img src="http://placehold.it/180x180&amp;text=Picture" class="img-thumbnail change-img" title="Click on picture to change"><input type="file" class="techImg hide"><div class="input-group img-url"><span class="input-group-addon"><input type="checkbox" aria-label="tech-img-url"></span><input class="form-control" type="text" name="tech-img-url" placeholder="Image URL" disabled /></div></td>';
         _strHTML += '    <td width="10%"><button class="btn btn-info btn-xs techAdd"><i class="fa fa-plus"></i></button> <button class="btn btn-danger btn-xs techRemove"><i class="fa fa-minus"></i></button>';
         _strHTML += '    </td>';
         _strHTML += '</tr>';
@@ -184,7 +184,7 @@ function fnSetShortDescription() {
 
 function fnSetTour() {
     if ($("#surgeryTabs li.active a").text() === "Image") {
-        $("div.tour").html($($("#surgeryTabs li.active a").attr("href")).find(".form-group").html());
+        $("div.tour").html($($("#surgeryTabs li.active a").attr("href")).find(".form-group img"));
     }
     else {
         $("div.tour").html($($("#surgeryTabs li.active a").attr("href")).find("textarea").val());
@@ -197,6 +197,17 @@ function fnSetConsultationFeatures() {
     $(".consultation-menu input[type='checkbox']:checked").each(function (_index, _ele) {
         $("div.consultation").append($(_ele).parent().parent().find("div.panel").parent().html());
     });
+
+    setTimeout(function () {
+        $(".consultation .panel .panel-title a").each(function (_index, _ele) {
+            if ($(_ele).hasClass("collapsed")) {
+                console.log($(_ele).hasClass("collapsed"));
+                $(_ele).click();
+            }
+        });
+        
+    }, 1000);
+   
 }
 
 function fnOurDoctor() {
@@ -370,6 +381,15 @@ function fnOurDoctor() {
                     'scrollTop': 0
                 }, 900, 'swing', function () {
 
+                    $(".consultation-menu .panel-collapse").each(function (_index, _ele) {
+                        if ($(_ele).hasClass("in")) {
+                            console.log($(_ele).attr("class").split(" ")[1]);
+                            if ($(_ele).parent().find("a[href='." + $(_ele).attr("class").split(" ")[1] + "']").hasClass("collapsed")) {
+                                $(_ele).removeClass("in")
+                            }
+                        }
+                    });
+
                     $("#cmsBuilder").fadeIn('slow', function () {
                         $(".preLoad-wrap").fadeOut();
                     });
@@ -447,10 +467,17 @@ function fnOurDoctor() {
             }
         });
 
-        $("#chkBgImage").change(function () {
+        $(document).on("change", ".img-url input[type='checkbox']", function () {
             if ($(this).prop("checked")) {
-                $("#bg-image").removeAttr("disabled");
+                $("input[name='" + $(this).attr("aria-label") + "'").removeAttr("disabled");
             } else {
-                $("#bg-image").attr("disabled", "disabled").val("");
+                $("input[name='" + $(this).attr("aria-label") + "'").attr("disabled", "disabled").val("");
+                $("input[name='" + $(this).attr("aria-label") + "'").parent().parent().find("img").attr("src", "http://placehold.it/180x180&text=Picture");
             }
+        });
+
+        $(document).on("paste", ".img-url input[type='text']", function (e) {
+            setTimeout(function () {
+                $(e.currentTarget).parent().parent().find("img").attr("src", $(e.currentTarget).val());
+            }, 10);
         });
